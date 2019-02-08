@@ -1,0 +1,100 @@
+/*Styles for church website*/
+
+/*Body*/
+
+body{
+font-family: Courgette;
+}
+
+
+/*Classes*/
+
+
+.logo{
+float: left;
+}
+.title{
+padding-top: 50px;
+padding-left: 32%;
+font-family: Courgette;
+color: #003366;
+}
+.logoDiv{
+background-color: #fff;
+margin-bottom: -1%;
+margin-top: -2%;
+}
+.nav{
+background-color: #fff;
+font-family: Courgette;
+font-size: 1.5em;
+border-style: solid;
+border-color: #003366;
+}
+.button{
+padding-left: 2%;
+padding-right: 2%;
+text-decoration: none;
+}
+.leftButton{
+margin-left: 20%;
+}
+a.button:link {
+  color: #003366;
+}
+a.button:visited {
+  color: #003366;
+}
+a.button:hover {
+  color: #fff;
+  background-color: #003366;
+}
+a.button:active {
+  color: #fff;
+  background-color: #003366;
+}
+.whiteBack{
+background-color: #fff;
+}
+.blueBack{
+background-color: #003366;
+}
+.whiteText{
+color: #fff;
+}
+.blueText{
+color: #003366;
+}
+.footer{
+background-color: #000066;
+color: #fff;
+text-align: center;
+margin-top: -1.2%;
+}
+.marginTop{
+margin-top: 37%;
+}
+.paddings{
+padding: 5%;
+}
+.paddingBottom{
+padding-bottom: 5%;
+}
+.paddingTop{
+padding-top: 5%;
+}
+.center{
+text-align: center;
+}
+.map{
+margin-left: 15%;
+}
+.contact{
+margin-left: 35%;
+}
+.textField{
+height: 100px;
+}
+
+
+
