@@ -36,9 +36,13 @@ footer {
   padding: 30px;
   width: 65%;  
   margin-left: 32%;  
-  margin-top: 5px;
-    
+  margin-top: 5px;    
 }
+
+.caption {
+  text-align: center; 
+}
+
 /*Particles*/
 #particles-js{    
   background: #0b0c10;
