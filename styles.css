@@ -43,6 +43,13 @@ footer {
   text-align: center; 
 }
 
+.row {
+  display: flex;
+}
+
+.column {
+  margin-left: 15%;
+}
 /*Particles*/
 #particles-js{    
   background: #0b0c10;
