@@ -18,7 +18,7 @@
 <body>
     
 <div id="particles-js">
-     <nav class="nav">
+    <nav class="nav">
     <ul>
         <li>
             <a href="index.html">Home</a>  
@@ -32,14 +32,17 @@
 </nav>
     
     <div class="slider">
-        <h1>Life Expectancy Data Analysis</h1>
-        <p>This project was developed in R, and it seeks to answer the question of how alcohol consumption, BMI, schooling, and status affect life expectancy. The dataset used was from the Global Health Observatory data repository under the World Health Organization. I built several multiple regression models to determine the best model. The null hypothesis was: Model with no independent variables fits life expectancy well enough, H0: R2=0. The alternative hypothesis was: Model with at least one independent variable better fits life expectancy than the intercept only model, Ha: R2 ≠0.</p>
-        <p>Model 1 used numerical independent variables (alcohol, BMI, schooling) and life expectancy as the dependent variable.The result was F(3,2565), p<0.05, R^2=0.590. Model 2 used categorical independent variable (status) and life expectancy as the dependent variable. The result was F(1,2567)=748.8, p<0.05, R2=0.226. Model 3 used all the significant independent variables from our previous two models based on p-value (alcohol, BMI, schooling, status) and life expectancy as the dependent variable. The result was F(4,2564)=987.7, p<0.05, R2=0.606. The best model was Model 3, and its regression assumption diagnostic plots are below.</p>
+        <h1>Heart Attack Data Analysis</h1>
+        <p>This project, developed in Python, analyzed heart attack data which have been organized into 14 variables used by all published experiments: age, sex, chest pain type, resting blood pressure, serum cholesterol, fasting blood sugar, resting electrocardiographic results, maximum heart rate achieved, exercise induced angina, ST depression induced by exercise relative to rest, slope of the ST segment, number of major vessels colored by flourosopy, thal, and the target value, which can be 0 (less chance of heart attack) or 1 (more change of heart attack). This program created a heatmap for correlation visualization, created swarmplot(s) of 2 variables of interest + target combinations, executed statistical analysis, and then fed relevant data into an SVM model tested by 10-fold cross validation to better understand which of these variables significantly affect(s) the probability of heart attack.</p>
         <figure>
-        <img src="images/regressionPlots.PNG" alt="Regression Assumption Plots" class="center">    
-        <figcaption class="caption">The Four Regression Assumption Plots</figcaption>
-        </figure>     
-        <p>The equation for Model 3 was Y=45.000 – (0.269*Alcohol) + (0.105*BMI) + (1.732*Schooling) + (4.034*Status). My findings were statistically significant at the selected alpha level of 0.05 since p<0.05. As a result, we reject the null hypothesis and conclude that the model with at least one independent variable better fits life expectancy than the intercept only model. Our findings can be generalized to the population since our samples passed all of the regression assumptions. The implication from my study is that alcohol consumption, BMI, education, and status of a country do affect life expectancy. As a result, countries can work on improving their population’s health by slightly decreasing alcohol consumption, increasing BMIs to a healthy level, and increase schooling. Developed countries also tend to have longer life expectancies than developing countries as expected.</p>
+        <img src="images/heatmap.PNG" alt="Heatmap" class="center">
+        <figcaption class="caption">Correlation Heatmap</figcaption>
+        </figure>  
+        <figure>
+        <img src="images/swarmplots.PNG" alt="Swarmplots" class="center">
+        <figcaption class="caption">Swarmplots of variables of interest</figcaption>
+        </figure>  
+        <p>After visualization and statistical analysis, some of the variables that affect probablity of heart attack were determined to be mean maximum heart rate, exercise induced angina, and number of major vessels colored by flourosopy. The SVM model trained using these data was able to predict target values at around 70% accuracy.</p>
         
         
     </div>
