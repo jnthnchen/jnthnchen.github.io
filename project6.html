@@ -1,70 +1,166 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!--mobile friendly-->
-    <title>Jonathan Chen</title>
-    <script src="jquery-2.1.4.js"></script>
-    <script src="particles.js"></script>
-    <link rel="stylesheet" href="styles.css" type="text/css" />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css?family=Open Sans"
-    />
+  <title>Jonathan Chen</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
+  <link
+    rel="stylesheet"
+    href="https://fonts.googleapis.com/css?family=Raleway"
+  />
+  <style>
+    body,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5 {
+      font-family: "Raleway", sans-serif;
+    }
+    .w3-third img {
+      margin-bottom: -6px;
+      opacity: 0.8;
+      cursor: pointer;
+    }
+    .w3-third img:hover {
+      opacity: 1;
+    }
+  </style>
+  <script type="text/javascript" src="particles.js" defer></script>
+  <script type="text/javascript" src="app.js" defer></script>
+  <!--App uses custom code from config file, if want original code w/user response then download app again and use original app code-->
+  <body class="w3-light-grey w3-content" style="max-width: 1600px">
+    <!-- Sidebar/menu -->
+    <div id="particles-js"></div>
+    <nav
+      class="
+        w3-sidebar
+        w3-bar-block
+        w3-white
+        w3-animate-left
+        w3-text-black
+        w3-collapse
+        w3-top
+        w3-center
+        w3-opacity
+      "
+      style="z-index: 3; width: 300px; font-weight: bold"
+      id="mySidebar"
+    >
+      <br />
+      <h3 class="w3-padding-64 w3-center">
+        <b>JONATHAN<br />CHEN</b>
+      </h3>
+      <a
+        href="index.html#about"
+        onclick="w3_close()"
+        class="w3-bar-item w3-button"
+        >ABOUT</a
+      >
+      <a
+        href="index.html#projects"
+        onclick="w3_close()"
+        class="w3-bar-item w3-button"
+        >PROJECTS</a
+      >
+    </nav>
 
-    <style></style>
-  </head>
-  <body>
-    <div id="particles-js">
-      <nav class="nav">
-        <ul>
-          <li>
-            <a href="index.html">Home</a>
-          </li>
-        </ul>
-        <ul>
-          <li>
-            <a href="projects.html">Projects</a>
-          </li>
-        </ul>
-      </nav>
+    <!-- Top menu on small screens -->
+    <header
+      class="w3-container w3-top w3-hide-large w3-white w3-xlarge w3-padding-16"
+    >
+      <span class="w3-left w3-padding">JONATHAN CHEN</span>
+      <a
+        href="javascript:void(0)"
+        class="w3-right w3-button w3-white"
+        onclick="w3_open()"
+        >☰</a
+      >
+    </header>
 
-      <div class="slider">
-        <h1>Weather Database</h1>
-        <p>
-          This group project was to design and create a database using MySQL.
-          The dataset we chose was from Kaggle and consisted of weather data
-          from major cities in the world. As weather is a globally relevant
-          phenomenon and climate change being a hot topic, we thought that a
-          weather database would be useful to both scientists and the general
-          public. This weather data included humidity, pressure, temperature,
-          weather description, wind direction, and wind speed. In addition, we
-          created some of our own data such as altitude, precipitation, air
-          quality, and cloudiness. Due to the enormous amount of data within the
-          Kaggle dataset, we reduced the number of cities to just 10 for
-          manageability. Furthermore, we decided to limit our date/time records
-          to 500 hours worth of data. The whole project took careful planning,
-          drafting, normalizing, and importing. The final entity relationship
-          diagram is below.
-        </p>
-        <figure>
-          <img
-            src="images/ERD.PNG"
-            alt="Entity Relationship Diagram"
-            class="center mobileFriendlyImage"
-          />
-          <figcaption class="caption">
-            Final Entity Relationship Diagram
-          </figcaption>
-        </figure>
+    <!-- Overlay effect when opening sidebar on small screens -->
+    <div
+      class="w3-overlay w3-hide-large w3-animate-opacity"
+      onclick="w3_close()"
+      style="cursor: pointer"
+      title="close side menu"
+      id="myOverlay"
+    ></div>
+
+    <!-- !PAGE CONTENT! -->
+    <div class="w3-main" style="margin-left: 300px">
+      <!-- Push down content on small screens -->
+      <div class="w3-hide-large" style="margin-top: 83px"></div>
+
+      <!-- About section -->
+      <div
+        class="
+          w3-container w3-dark-grey w3-center w3-text-light-grey w3-padding-32
+        "
+        id="about"
+      >
+        <h2><b>Weather Database</b></h2>
+
+        <div class="w3-content w3-justify" style="max-width: 600px">
+          <p>
+            This team project was to design and create a database using MySQL.
+            The dataset we chose was from Kaggle and consisted of weather data
+            from major cities in the world. As weather is a globally relevant
+            phenomenon and climate change being a hot topic, we thought that a
+            weather database would be useful to both scientists and the general
+            public. This weather data included humidity, pressure, temperature,
+            weather description, wind direction, and wind speed. In addition, we
+            created some of our own data such as altitude, precipitation, air
+            quality, and cloudiness. Due to the enormous amount of data within
+            the Kaggle dataset, we reduced the number of cities to just 10 for
+            manageability. Furthermore, we decided to limit our date/time
+            records to 500 hours worth of data. The whole project took careful
+            planning, drafting, normalizing, and importing. The final entity
+            relationship diagram is below.
+          </p>
+          <figure>
+            <img
+              src="images/ERD.PNG"
+              alt="Entity Relationship Diagram"
+              class="w3-image"
+            />
+            <figcaption class="w3-center">
+              Final Entity Relationship Diagram
+            </figcaption>
+          </figure>
+        </div>
       </div>
 
-      <footer><p>Jonathan Chen &copy 2021</p></footer>
+      <!-- Footer -->
+      <footer>
+        <div class="w3-black w3-center w3-padding-24">
+          <p>Jonathan Chen &copy 2021</p>
+        </div>
+      </footer>
+
+      <!-- End page content -->
     </div>
 
-    <script type="text/javascript" src="particles.js"></script>
-    <script type="text/javascript" src="app.js"></script>
-    <!--App uses custom code from config file, if want original code w/user response then download app again and use original app code-->
+    <script>
+      // Script to open and close sidebar
+      function w3_open() {
+        document.getElementById("mySidebar").style.display = "block";
+        document.getElementById("myOverlay").style.display = "block";
+      }
+
+      function w3_close() {
+        document.getElementById("mySidebar").style.display = "none";
+        document.getElementById("myOverlay").style.display = "none";
+      }
+
+      // Modal Image Gallery
+      function onClick(element) {
+        document.getElementById("img01").src = element.src;
+        document.getElementById("modal01").style.display = "block";
+        var captionText = document.getElementById("caption");
+        captionText.innerHTML = element.alt;
+      }
+    </script>
   </body>
 </html>
