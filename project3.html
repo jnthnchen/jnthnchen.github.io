@@ -1,61 +1,85 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-<head>
-	<meta charset="utf-8" />
-	<title>Jonathan Chen</title>
-    <script src="jquery-2.1.4.js"></script> 
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!--mobile friendly-->
+    <title>Jonathan Chen</title>
+    <script src="jquery-2.1.4.js"></script>
     <script src="particles.js"></script>
-	<link rel="stylesheet" href="styles.css" type="text/css"/>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open Sans">
-   
-   
-    
-    <style>
- 
-	
-	</style>
-</head>
-<body>
-    
-<div id="particles-js">
-    <nav class="nav">
-    <ul>
-        <li>
-            <a href="index.html">Home</a>  
-        </li>
-     </ul>
-     <ul>
-        <li>
-            <a href="projects.html">Projects</a>            
-        </li>
-    </ul>   
-</nav>
-    
-    <div class="slider">
+    <link rel="stylesheet" href="styles.css" type="text/css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Open Sans"
+    />
+
+    <style></style>
+  </head>
+  <body>
+    <div id="particles-js">
+      <nav class="nav">
+        <ul>
+          <li>
+            <a href="index.html">Home</a>
+          </li>
+        </ul>
+        <ul>
+          <li>
+            <a href="projects.html">Projects</a>
+          </li>
+        </ul>
+      </nav>
+
+      <div class="slider">
         <h1>Heart Attack Data Analysis</h1>
-        <p>This project, developed in Python, analyzed heart attack data which have been organized into 14 variables used by all published experiments: age, sex, chest pain type, resting blood pressure, serum cholesterol, fasting blood sugar, resting electrocardiographic results, maximum heart rate achieved, exercise induced angina, ST depression induced by exercise relative to rest, slope of the ST segment, number of major vessels colored by flourosopy, thal, and the target value, which can be 0 (less chance of heart attack) or 1 (more change of heart attack). This program created a heatmap for correlation visualization, created swarmplot(s) of 2 variables of interest + target combinations, executed statistical analysis, and then fed relevant data into an SVM model tested by 10-fold cross validation to better understand which of these variables significantly affect(s) the probability of heart attack.</p>
+        <p>
+          This project, developed in Python, analyzed heart attack data which
+          have been organized into 14 variables used by all published
+          experiments: age, sex, chest pain type, resting blood pressure, serum
+          cholesterol, fasting blood sugar, resting electrocardiographic
+          results, maximum heart rate achieved, exercise induced angina, ST
+          depression induced by exercise relative to rest, slope of the ST
+          segment, number of major vessels colored by flourosopy, thal, and the
+          target value, which can be 0 (less chance of heart attack) or 1 (more
+          change of heart attack). This program created a heatmap for
+          correlation visualization, created swarmplot(s) of 2 variables of
+          interest + target combinations, executed statistical analysis, and
+          then fed relevant data into an SVM model tested by 10-fold cross
+          validation to better understand which of these variables significantly
+          affect(s) the probability of heart attack.
+        </p>
         <figure>
-        <img src="images/heatmap.PNG" alt="Heatmap" class="center">
-        <figcaption class="caption">Correlation Heatmap</figcaption>
-        </figure>  
+          <img
+            src="images/heatmap.PNG"
+            alt="Heatmap"
+            class="center mobileFriendlyImage"
+          />
+          <figcaption class="caption">Correlation Heatmap</figcaption>
+        </figure>
         <figure>
-        <img src="images/swarmplots.PNG" alt="Swarmplots" class="center">
-        <figcaption class="caption">Swarmplots of variables of interest</figcaption>
-        </figure>  
-        <p>After visualization and statistical analysis, some of the variables that affect probablity of heart attack were determined to be mean maximum heart rate, exercise induced angina, and number of major vessels colored by flourosopy. The SVM model trained using these data was able to predict target values at around 70% accuracy.</p>
-        
-        
+          <img
+            src="images/swarmplots.PNG"
+            alt="Swarmplots"
+            class="center mobileFriendlyImage"
+          />
+          <figcaption class="caption">
+            Swarmplots of variables of interest
+          </figcaption>
+        </figure>
+        <p>
+          After visualization and statistical analysis, some of the variables
+          that affect probablity of heart attack were determined to be mean
+          maximum heart rate, exercise induced angina, and number of major
+          vessels colored by flourosopy. The SVM model trained using these data
+          was able to predict target values at around 70% accuracy.
+        </p>
+      </div>
+
+      <footer><p>Jonathan Chen &copy 2021</p></footer>
     </div>
-    
-    
-    <footer><p>Jonathan Chen &copy 2021</p></footer>
-</div>    
-        
 
-  <script type="text/javascript" src="particles.js"></script>  
-<script type="text/javascript" src="app.js"></script><!--App uses custom code from config file, if want original code w/user response then download app again and use original app code-->
-
-
-</body>
+    <script type="text/javascript" src="particles.js"></script>
+    <script type="text/javascript" src="app.js"></script>
+    <!--App uses custom code from config file, if want original code w/user response then download app again and use original app code-->
+  </body>
 </html>
-
