@@ -18,6 +18,14 @@
     h5 {
       font-family: "Raleway", sans-serif;
     }
+    @keyframes myMove {
+      from {
+        left: -300px;
+      }
+      to {
+        left: 0px;
+      }
+    }
   </style>
   <script type="text/javascript" src="particles.js" defer></script>
   <script type="text/javascript" src="app.js" defer></script>
@@ -161,14 +169,13 @@
       // Script to open and close sidebar
       function w3_open() {
         document.getElementById("mySidebar").style.opacity = "1";
-        document.getElementById("myOverlay").style.opacity = "1";
+        document.getElementById("mySidebar").style.animation = "myMove 1s 1";
         document.getElementById("mySidebar").style.display = "block";
         document.getElementById("myOverlay").style.display = "block";
       }
 
       function w3_close() {
         document.getElementById("mySidebar").style.opacity = ".6";
-        document.getElementById("myOverlay").style.opacity = ".6";
         document.getElementById("mySidebar").style.display = "none";
         document.getElementById("myOverlay").style.display = "none";
       }
