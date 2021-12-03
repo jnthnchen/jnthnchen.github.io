@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+  <title>Jonathan Chen</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
+  <link
+    rel="stylesheet"
+    href="https://fonts.googleapis.com/css?family=Raleway"
+  />
+  <style>
+    body,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5 {
+      font-family: "Raleway", sans-serif;
+    }
+    @keyframes myMove {
+      from {
+        left: -300px;
+      }
+      to {
+        left: 0px;
+      }
+    }
+  </style>
+  <script type="text/javascript" src="particles.js" defer></script>
+  <script type="text/javascript" src="app.js" defer></script>
+  <!--App uses custom code from config file, if want original code w/user response then download app again and use original app code-->
+  <body class="w3-light-grey w3-content" style="max-width: 1600px">
+    <!-- Sidebar/menu -->
+    <div id="particles-js"></div>
+    <nav
+      class="
+        w3-sidebar
+        w3-bar-block
+        w3-white
+        w3-text-black
+        w3-collapse
+        w3-top
+        w3-center
+        w3-opacity
+      "
+      style="z-index: 3; width: 300px; font-weight: bold"
+      id="mySidebar"
+    >
+      <br />
+      <h3 class="w3-padding-64 w3-center">
+        <b>JONATHAN<br />CHEN</b>
+      </h3>
+      <a
+        href="index.html#about"
+        onclick="w3_close()"
+        class="w3-bar-item w3-button"
+        >ABOUT</a
+      >
+      <a
+        href="index.html#projects"
+        onclick="w3_close()"
+        class="w3-bar-item w3-button"
+        >PROJECTS</a
+      >
+    </nav>
+
+    <!-- Top menu on small screens -->
+    <header class="w3-container w3-top w3-hide-large w3-white w3-xlarge">
+      <span class="w3-left w3-padding">JONATHAN CHEN</span>
+      <a
+        href="javascript:void(0)"
+        class="w3-right w3-button w3-white"
+        onclick="w3_open()"
+        >☰</a
+      >
+    </header>
+
+    <!-- Overlay effect when opening sidebar on small screens -->
+    <div
+      class="w3-overlay w3-hide-large w3-animate-opacity"
+      onclick="w3_close()"
+      style="cursor: pointer"
+      title="close side menu"
+      id="myOverlay"
+    ></div>
+
+    <!-- !PAGE CONTENT! -->
+    <div class="w3-main" style="margin-left: 300px">
+      <!-- Push down content on small screens -->
+      <div class="w3-hide-large" style="margin-top: 83px"></div>
+
+      <!-- About section -->
+      <div
+        class="
+          w3-container w3-dark-grey w3-center w3-text-light-grey w3-padding-32
+        "
+        id="about"
+      >
+        <h2><b>User-Centered Design</b></h2>
+
+        <div class="w3-content w3-justify" style="max-width: 600px">
+          <p>
+            This user-centered design team project aimed to design a mobile
+            application to solve a real world problem in a manner that
+            incorporates joy. We decided to design an app to help students
+            better manage their time so that they can have more time to spend on
+            other things in life and therefore increase joy and self-care. Steps
+            taken included research, design critiques, empathy mapping,
+            contextual inquiries, lo-fi prototype, hi-fi prototype, and
+            prototype refinements. We used tools such as Miro and Figma for
+            collaboration and prototypes.
+          </p>
+          <a
+            href="https://sites.google.com/terpmail.umd.edu/team2awesome/"
+            target="_blank"
+            >Team Website</a
+          >
+          <br />
+          <a
+            href=" https://www.figma.com/file/Xh8O5wLRN3VrEgrL6UNMSH/INST362-Hi-Fi-Prototype?node-id=0%3A1"
+            target="_blank"
+            >Hi-Fi Figma Prototype</a
+          >
+
+          <figure>
+            <img
+              src="images/userCenteredLoFi.PNG"
+              alt="Lo-Fi Prototype"
+              class="w3-image"
+            />
+            <figcaption class="w3-center">Lo-Fi Prototype</figcaption>
+          </figure>
+          <figure>
+            <img
+              src="images/userCenteredHiFi.PNG"
+              alt="Hi-Fi Prototype"
+              class="w3-image"
+            />
+            <figcaption class="w3-center">Hi-Fi Prototype</figcaption>
+          </figure>
+        </div>
+      </div>
+
+      <!-- Footer -->
+      <footer>
+        <div class="w3-black w3-center w3-padding-24">
+          <p>&copy 2021 Jonathan Chen</p>
+        </div>
+      </footer>
+
+      <!-- End page content -->
+    </div>
+
+    <script>
+      // Script to open and close sidebar
+      function w3_open() {
+        document.getElementById("mySidebar").style.opacity = "1";
+        document.getElementById("mySidebar").style.animation = "myMove .5s 1";
+        document.getElementById("mySidebar").style.display = "block";
+        document.getElementById("myOverlay").style.display = "block";
+      }
+
+      function w3_close() {
+        document.getElementById("mySidebar").style.opacity = ".6";
+        document.getElementById("mySidebar").style.display = "none";
+        document.getElementById("myOverlay").style.display = "none";
+      }
+    </script>
+  </body>
+</html>
