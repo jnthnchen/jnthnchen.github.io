@@ -1,0 +1,289 @@
+.scene {
+  width: 5%;
+  height: 5%;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.ball {
+  width: 20px;
+  height: 20px;
+  background-color: red;
+  border-radius: 50%;
+  position: absolute;
+  -webkit-animation: ballani 2s infinite alternate;
+  animation: ballani 2s infinite alternate;
+}
+
+@-webkit-keyframes ballani {
+  0% {
+    transform: translateX(0px);
+    background-color: red;
+  }
+  50% {
+    width: 50px;
+    height: 50px;
+    background-color: green;
+    border-radius: 0%;
+  }
+  100% {
+    transform: translateX(200px);
+    background-color: blue;
+  }
+}
+
+@keyframes ballani {
+  0% {
+    transform: translateX(0px);
+    background-color: red;
+  }
+  50% {
+    width: 50px;
+    height: 50px;
+    background-color: green;
+    border-radius: 0%;
+  }
+  100% {
+    transform: translateX(200px);
+    background-color: blue;
+  }
+}
+.container1 {
+  transform: rotate(12deg);
+}
+.container1 .ball {
+  -webkit-animation-delay: 0.5s;
+  animation-delay: 0.5s;
+}
+
+.container2 {
+  transform: rotate(24deg);
+}
+.container2 .ball {
+  -webkit-animation-delay: 1s;
+  animation-delay: 1s;
+}
+
+.container3 {
+  transform: rotate(36deg);
+}
+.container3 .ball {
+  -webkit-animation-delay: 1.5s;
+  animation-delay: 1.5s;
+}
+
+.container4 {
+  transform: rotate(48deg);
+}
+.container4 .ball {
+  -webkit-animation-delay: 2s;
+  animation-delay: 2s;
+}
+
+.container5 {
+  transform: rotate(60deg);
+}
+.container5 .ball {
+  -webkit-animation-delay: 2.5s;
+  animation-delay: 2.5s;
+}
+
+.container6 {
+  transform: rotate(72deg);
+}
+.container6 .ball {
+  -webkit-animation-delay: 3s;
+  animation-delay: 3s;
+}
+
+.container7 {
+  transform: rotate(84deg);
+}
+.container7 .ball {
+  -webkit-animation-delay: 3.5s;
+  animation-delay: 3.5s;
+}
+
+.container8 {
+  transform: rotate(96deg);
+}
+.container8 .ball {
+  -webkit-animation-delay: 4s;
+  animation-delay: 4s;
+}
+
+.container9 {
+  transform: rotate(108deg);
+}
+.container9 .ball {
+  -webkit-animation-delay: 4.5s;
+  animation-delay: 4.5s;
+}
+
+.container10 {
+  transform: rotate(120deg);
+}
+.container10 .ball {
+  -webkit-animation-delay: 5s;
+  animation-delay: 5s;
+}
+
+.container11 {
+  transform: rotate(132deg);
+}
+.container11 .ball {
+  -webkit-animation-delay: 5.5s;
+  animation-delay: 5.5s;
+}
+
+.container12 {
+  transform: rotate(144deg);
+}
+.container12 .ball {
+  -webkit-animation-delay: 6s;
+  animation-delay: 6s;
+}
+
+.container13 {
+  transform: rotate(156deg);
+}
+.container13 .ball {
+  -webkit-animation-delay: 6.5s;
+  animation-delay: 6.5s;
+}
+
+.container14 {
+  transform: rotate(168deg);
+}
+.container14 .ball {
+  -webkit-animation-delay: 7s;
+  animation-delay: 7s;
+}
+
+.container15 {
+  transform: rotate(180deg);
+}
+.container15 .ball {
+  -webkit-animation-delay: 7.5s;
+  animation-delay: 7.5s;
+}
+
+.container16 {
+  transform: rotate(192deg);
+}
+.container16 .ball {
+  -webkit-animation-delay: 8s;
+  animation-delay: 8s;
+}
+
+.container17 {
+  transform: rotate(204deg);
+}
+.container17 .ball {
+  -webkit-animation-delay: 8.5s;
+  animation-delay: 8.5s;
+}
+
+.container18 {
+  transform: rotate(216deg);
+}
+.container18 .ball {
+  -webkit-animation-delay: 9s;
+  animation-delay: 9s;
+}
+
+.container19 {
+  transform: rotate(228deg);
+}
+.container19 .ball {
+  -webkit-animation-delay: 9.5s;
+  animation-delay: 9.5s;
+}
+
+.container20 {
+  transform: rotate(240deg);
+}
+.container20 .ball {
+  -webkit-animation-delay: 10s;
+  animation-delay: 10s;
+}
+
+.container21 {
+  transform: rotate(252deg);
+}
+.container21 .ball {
+  -webkit-animation-delay: 10.5s;
+  animation-delay: 10.5s;
+}
+
+.container22 {
+  transform: rotate(264deg);
+}
+.container22 .ball {
+  -webkit-animation-delay: 11s;
+  animation-delay: 11s;
+}
+
+.container23 {
+  transform: rotate(276deg);
+}
+.container23 .ball {
+  -webkit-animation-delay: 11.5s;
+  animation-delay: 11.5s;
+}
+
+.container24 {
+  transform: rotate(288deg);
+}
+.container24 .ball {
+  -webkit-animation-delay: 12s;
+  animation-delay: 12s;
+}
+
+.container25 {
+  transform: rotate(300deg);
+}
+.container25 .ball {
+  -webkit-animation-delay: 12.5s;
+  animation-delay: 12.5s;
+}
+
+.container26 {
+  transform: rotate(312deg);
+}
+.container26 .ball {
+  -webkit-animation-delay: 13s;
+  animation-delay: 13s;
+}
+
+.container27 {
+  transform: rotate(324deg);
+}
+.container27 .ball {
+  -webkit-animation-delay: 13.5s;
+  animation-delay: 13.5s;
+}
+
+.container28 {
+  transform: rotate(336deg);
+}
+.container28 .ball {
+  -webkit-animation-delay: 14s;
+  animation-delay: 14s;
+}
+
+.container29 {
+  transform: rotate(348deg);
+}
+.container29 .ball {
+  -webkit-animation-delay: 14.5s;
+  animation-delay: 14.5s;
+}
+
+.container30 {
+  transform: rotate(360deg);
+}
+.container30 .ball {
+  -webkit-animation-delay: 15s;
+  animation-delay: 15s;
+}
