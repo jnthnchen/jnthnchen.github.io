@@ -13,3 +13,9 @@
 .flex-container {
   display: flex;
 }
+
+/*Other*/
+#myContainer {
+  width: auto;
+  height: auto;
+}
