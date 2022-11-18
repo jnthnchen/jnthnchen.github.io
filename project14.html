@@ -88,82 +88,95 @@
         id="about"
         style="min-height: 100vh"
       >
-        <h2><b>Nutrient Calculator Web Application</b></h2>
+        <h2>
+          <b>Salaries Data Science</b>
+        </h2>
 
         <div class="w3-content w3-left-align" style="max-width: 100%">
           <p>
-            This opportunity from the USDA required a program that allows for
-            food profile modifications and nutrient calculations. To tackle this
-            challenge, my team developed a Flask web application that allows the
-            user to search and select foods, dynamically build/modify food
-            profiles, and calculate/display nutrient amounts calibrated per 100
-            grams. Our project was divided into two main versions. In the first
-            version, I focused on developing nutrient calculations, data
-            storage/retrieval methods, and saving/resetting capabilities. This
-            version was a single page app with an accordion search/selection and
-            tabs that allow the user to switch between the food profile and
-            calculation display.
+            For this project, I used a recent salary information data set from
+            Kaggle. The salaries are of data-related positions and the data
+            includes fields such as job title, experience level, and remote
+            ratio (0-100 where 100 is fully remote). To start, I cleaned the
+            data using OpenRefine and grouped similar job titles together, such
+            as grouping ML Engineer with Machine Learning Engineer. Next, I did
+            some basic data analysis and visualization using Python to answer
+            some questions I had about relationships between the fields. Then I
+            used the Elastic Net and Lasso regression models tested by 10-fold
+            cross validation to see how well they predict salary based on job
+            title and experience level (excluding the executive position as
+            there were only a few).
           </p>
+
           <div class="w3-center">
+            <div class="flex-container">
+              <div>
+                <figure>
+                  <img
+                    src="images/project_14_1.PNG"
+                    alt="Salary vs Job Title"
+                    class="w3-image"
+                  />
+
+                  <figcaption class="w3-center">Salary vs Job Title</figcaption>
+                </figure>
+                <figure>
+                  <img
+                    src="images/project_14_2.PNG"
+                    alt="Salary vs Remote Ratio"
+                    class="w3-image"
+                  />
+
+                  <figcaption class="w3-center">
+                    Salary vs Remote Ratio
+                  </figcaption>
+                </figure>
+              </div>
+              <div>
+                <figure>
+                  <img
+                    src="images/project_14_3.PNG"
+                    alt="Remote Ratio vs Experience Level"
+                    class="w3-image"
+                  />
+
+                  <figcaption class="w3-center">
+                    Remote Ratio vs Experience Level
+                  </figcaption>
+                </figure>
+                <figure>
+                  <img
+                    src="images/project_14_4.PNG"
+                    alt="Salary vs Experience Level"
+                    class="w3-image"
+                  />
+
+                  <figcaption class="w3-center">
+                    Salary vs Experience Level
+                  </figcaption>
+                </figure>
+              </div>
+            </div>
             <figure>
               <img
-                src="images/project_13_1.PNG"
-                alt="Food Profile"
+                src="images/project_14_5.PNG"
+                alt="Salary vs Job Title based on Experience Level"
                 class="w3-image"
               />
+
               <figcaption class="w3-center">
-                Food profile example from first version
-              </figcaption>
-            </figure>
-            <figure>
-              <img
-                src="images/project_13_2.PNG"
-                alt="Calculations Display"
-                class="w3-image"
-              />
-              <figcaption class="w3-center">
-                Calculations display example from first version
+                Salary vs Job Title based on Experience Level
               </figcaption>
             </figure>
           </div>
+
           <p>
-            Despite the first version working fairly well, it did not live up to
-            the professional quality and expectations that we had hoped for. For
-            instance, every time the user selects or submits something, the
-            whole page would refresh and therefore give users a choppy
-            experience. That was when we decided to go for version 2, which
-            completely restructured our codebase to make it more efficient and
-            professional. It also included some features that were nonexistent
-            in the first version, such as a login/admin system and upload/export
-            data capabilities, not to mention a much smoother and professional
-            user interface. We added an experienced team member to help us on
-            this final version and I mainly worked on acting as a liaison
-            between the stakeholders, which included the client, tester,
-            supervisor, and our development team. I was also in charge of the
-            final deployment and delivery to the client.
+            What I found interesting is the high remote ratio among all
+            experience levels, which makes sense due to the pandemic and general
+            shift towards remote work. The models used job title and experience
+            level and predicted salary at ~58% accuracy for Elastic Net and ~63%
+            accuracy for Lasso.
           </p>
-          <div class="w3-center">
-            <figure>
-              <img
-                src="images/project_13_3.PNG"
-                alt="Food Profile"
-                class="w3-image"
-              />
-              <figcaption class="w3-center">
-                Food profile example from final version
-              </figcaption>
-            </figure>
-            <figure>
-              <img
-                src="images/project_13_4.PNG"
-                alt="Calculations Display"
-                class="w3-image"
-              />
-              <figcaption class="w3-center">
-                Calculations display example from final version
-              </figcaption>
-            </figure>
-          </div>
         </div>
       </div>
 

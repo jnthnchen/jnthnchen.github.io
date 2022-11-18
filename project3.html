@@ -88,48 +88,53 @@
         id="about"
         style="min-height: 100vh"
       >
-        <h2><b>Heart Attack Data Analysis</b></h2>
+        <h2><b>Store Helper</b></h2>
 
         <div class="w3-content w3-left-align" style="max-width: 100%">
           <p>
-            This project, developed in Python, analyzed heart attack data which
-            have been organized into 14 variables used by all published
-            experiments: age, sex, chest pain type, resting blood pressure,
-            serum cholesterol, fasting blood sugar, resting electrocardiographic
-            results, maximum heart rate achieved, exercise induced angina, ST
-            depression induced by exercise relative to rest, slope of the ST
-            segment, number of major vessels colored by flourosopy, thal, and
-            the target value, which can be 0 (less chance of heart attack) or 1
-            (more chance of heart attack). This program created a heatmap for
-            correlation visualization, created swarmplot(s) of 2 variables of
-            interest + target combinations, executed statistical analysis, and
-            then fed relevant data into an SVM model tested by 10-fold cross
-            validation to better understand which of these variables
-            significantly affect(s) the probability of heart attack.
+            This team project was developed in Python, and is designed to help
+            users find and buy items in a fictional warehouse store. The three
+            main features of this program are buy, store, and find. Typing 'buy'
+            in the command line allows the user to add items to cart based on
+            item ID. Typing 'store' allows the user to search for items either
+            directly by name or via other means designed to help narrow an item
+            down. Typing 'find' allows the user to find the general item list
+            based on department. Below are some sample screenshots from the
+            program, which is completely run from the command line.
           </p>
           <div class="w3-center">
             <figure>
-              <img src="images/heatmap.PNG" alt="Heatmap" class="w3-image" />
-              <figcaption class="w3-center">Correlation Heatmap</figcaption>
-            </figure>
-            <figure>
               <img
-                src="images/swarmplots.PNG"
-                alt="Swarmplots"
+                src="images/project_3_1.PNG"
+                alt="Program Screenshot"
                 class="w3-image"
               />
               <figcaption class="w3-center">
-                Swarmplots of variables of interest
+                Example of cart contents
+              </figcaption>
+            </figure>
+
+            <figure>
+              <img
+                src="images/project_3_2.PNG"
+                alt="Program Screenshot"
+                class="w3-image"
+              />
+              <figcaption class="w3-center">
+                Example of department searching
+              </figcaption>
+            </figure>
+            <figure>
+              <img
+                src="images/project_3_3.PNG"
+                alt="Program Screenshot"
+                class="w3-image"
+              />
+              <figcaption class="w3-center">
+                Example of narrowing down products
               </figcaption>
             </figure>
           </div>
-          <p>
-            After visualization and statistical analysis, some of the variables
-            that affect probablity of heart attack were determined to be mean
-            maximum heart rate, exercise induced angina, and number of major
-            vessels colored by flourosopy. The SVM model trained using these
-            data was able to predict target values at around 70% accuracy.
-          </p>
         </div>
       </div>
 

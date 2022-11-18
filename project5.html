@@ -88,53 +88,94 @@
         id="about"
         style="min-height: 100vh"
       >
-        <h2><b>Store Helper</b></h2>
+        <h2><b>Life Expectancy Data Analysis</b></h2>
 
         <div class="w3-content w3-left-align" style="max-width: 100%">
           <p>
-            This team project was developed in Python, and is designed to help
-            users find and buy items in a fictional warehouse store. The three
-            main features of this program are buy, store, and find. Typing 'buy'
-            in the command line allows the user to add items to cart based on
-            item ID. Typing 'store' allows the user to search for items either
-            directly by name or via other means designed to help narrow an item
-            down. Typing 'find' allows the user to find the general item list
-            based on department. Below are some sample screenshots from the
-            program, which is completely run from the command line.
+            This project was developed in R, and it seeks to answer the question
+            of how alcohol consumption, BMI, schooling, and status affect life
+            expectancy. The dataset used was from the Global Health Observatory
+            data repository under the World Health Organization. I built several
+            multiple regression models to determine the best model. The null
+            hypothesis was: Model with no independent variables fits life
+            expectancy well enough, H0: R2=0. The alternative hypothesis was:
+            Model with at least one independent variable better fits life
+            expectancy than the intercept-only model, Ha: R2 ≠0.
+          </p>
+          <p>
+            Model 1 used numerical independent variables (alcohol, BMI,
+            schooling) and life expectancy as the dependent variable.The result
+            was F(3,2565), p<0.05, R^2=0.590. Model 2 used categorical
+            independent variable (status) and life expectancy as the dependent
+            variable. The result was F(1,2567)=748.8, p<0.05, R2=0.226. Model 3
+            used all the significant independent variables from our previous two
+            models based on p-value (alcohol, BMI, schooling, status) and life
+            expectancy as the dependent variable. The result was
+            F(4,2564)=987.7, p<0.05, R2=0.606. The best model was Model 3, and
+            its regression assumption diagnostic plots are below.
           </p>
           <div class="w3-center">
-            <figure>
-              <img
-                src="images/warehouse1.PNG"
-                alt="Program Screenshot"
-                class="w3-image"
-              />
-              <figcaption class="w3-center">
-                Example of cart contents
-              </figcaption>
-            </figure>
+            <div class="flex-container">
+              <div>
+                <figure>
+                  <img
+                    src="images/project_5_1.PNG"
+                    alt="Residual vs Fitted"
+                    class="w3-image"
+                  />
 
-            <figure>
-              <img
-                src="images/warehouse2.PNG"
-                alt="Program Screenshot"
-                class="w3-image"
-              />
-              <figcaption class="w3-center">
-                Example of department searching
-              </figcaption>
-            </figure>
-            <figure>
-              <img
-                src="images/warehouse3.PNG"
-                alt="Program Screenshot"
-                class="w3-image"
-              />
-              <figcaption class="w3-center">
-                Example of narrowing down products
-              </figcaption>
-            </figure>
+                  <figcaption class="w3-center">Residual vs Fitted</figcaption>
+                </figure>
+
+                <figure>
+                  <img
+                    src="images/project_5_2.PNG"
+                    alt="Normal Q-Q"
+                    class="w3-image"
+                  />
+
+                  <figcaption class="w3-center">Normal Q-Q</figcaption>
+                </figure>
+              </div>
+              <div>
+                <figure>
+                  <img
+                    src="images/project_5_3.PNG"
+                    alt="Scale-Location"
+                    class="w3-image"
+                  />
+
+                  <figcaption class="w3-center">Scale-Location</figcaption>
+                </figure>
+                <figure>
+                  <img
+                    src="images/project_5_4.PNG"
+                    alt="Residual vs Leverage"
+                    class="w3-image"
+                  />
+                  <figcaption class="w3-center">
+                    Residual vs Leverage
+                  </figcaption>
+                </figure>
+              </div>
+            </div>
           </div>
+          <p>
+            The equation for Model 3 was Y=45.000 – (0.269*Alcohol) +
+            (0.105*BMI) + (1.732*Schooling) + (4.034*Status). My findings were
+            statistically significant at the selected alpha level of 0.05 since
+            p<0.05. As a result, we reject the null hypothesis and conclude that
+            the model with at least one independent variable better fits life
+            expectancy than the intercept-only model. Our findings can be
+            generalized to the population since our samples passed all of the
+            regression assumptions. The implication from my study is that
+            alcohol consumption, BMI, education, and status of a country do
+            affect life expectancy. As a result, countries can work on improving
+            their population’s health by slightly decreasing alcohol
+            consumption, increasing BMIs to a healthy level, and increasing
+            schooling. Developed countries also tended to have longer life
+            expectancies than developing countries do as expected.
+          </p>
         </div>
       </div>
 
