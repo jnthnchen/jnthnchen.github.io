@@ -39,6 +39,12 @@
   justify-content: center;
 }
 
+@media (max-width: 800px) {
+  .flex-container {
+    flex-direction: column;
+  }
+}
+
 /*Timeline*/
 * {
   box-sizing: border-box;
