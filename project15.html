@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+  <title>Jonathan Chen</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
+  <link
+    rel="stylesheet"
+    href="https://fonts.googleapis.com/css?family=Raleway"
+  />
+  <style>
+    body,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5 {
+      font-family: "Raleway", sans-serif;
+    }
+    @keyframes myMove {
+      from {
+        left: -300px;
+      }
+      to {
+        left: 0px;
+      }
+    }
+  </style>
+  <script type="text/javascript" src="particles.js" defer></script>
+  <script type="text/javascript" src="app.js" defer></script>
+  <!--App uses custom code from config file, if want original code w/user response then download app again and use original app code-->
+  <body class="w3-light-grey w3-content" style="min-width: 100%">
+    <!-- Sidebar/menu -->
+    <div id="particles-js"></div>
+    <nav
+      class="w3-sidebar w3-bar-block w3-white w3-text-black w3-collapse w3-top w3-center w3-opacity"
+      style="z-index: 3; width: 300px; font-weight: bold"
+      id="mySidebar"
+    >
+      <br />
+      <h3 class="w3-padding-64 w3-center">
+        <b>JONATHAN<br />CHEN</b>
+      </h3>
+      <a
+        href="index.html#about"
+        onclick="w3_close()"
+        class="w3-bar-item w3-button"
+        >ABOUT</a
+      >
+
+      <a
+        href="index.html#projects"
+        onclick="w3_close()"
+        class="w3-bar-item w3-button"
+        >PROJECTS</a
+      >
+    </nav>
+
+    <!-- Top menu on small screens -->
+    <header class="w3-container w3-top w3-hide-large w3-white w3-xlarge">
+      <span class="w3-left w3-padding">JONATHAN CHEN</span>
+      <a
+        href="javascript:void(0)"
+        class="w3-right w3-button w3-white"
+        onclick="w3_open()"
+        >☰</a
+      >
+    </header>
+
+    <!-- Overlay effect when opening sidebar on small screens -->
+    <div
+      class="w3-overlay w3-hide-large w3-animate-opacity"
+      onclick="w3_close()"
+      style="cursor: pointer"
+      title="close side menu"
+      id="myOverlay"
+    ></div>
+
+    <!-- !PAGE CONTENT! -->
+    <div class="w3-main" style="margin-left: 300px">
+      <!-- Push down content on small screens -->
+      <div class="w3-hide-large" style="margin-top: 83px"></div>
+
+      <!-- About section -->
+      <div
+        class="w3-container w3-dark-grey w3-center w3-text-light-grey w3-padding-32"
+        id="about"
+        style="min-height: 100vh"
+      >
+        <h2>
+          <b>Salaries Data Visualization using Tableau</b>
+        </h2>
+
+        <div class="w3-content w3-left-align" style="max-width: 100%">
+          <p>
+            To learn Tableau, I recreated the data visualizations from the
+            <a href="project14.html">salaries data science project</a>
+            using Tableau. I found Tableau extremely efficient and easy to use,
+            and look forward to working with it in the future. This dashboard is
+            interactive too, which is hugely useful and way more efficient to do
+            through Tableau than through manual coding.
+          </p>
+        </div>
+
+        <div
+          class="tableauPlaceholder"
+          id="viz1674670965993"
+          style="position: relative"
+        >
+          <noscript
+            ><a href="#"
+              ><img
+                alt="Dashboard 1 "
+                src="https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;6C&#47;6CYDM7W2C&#47;1_rss.png"
+                style="border: none" /></a></noscript
+          ><object class="tableauViz" style="display: none">
+            <param
+              name="host_url"
+              value="https%3A%2F%2Fpublic.tableau.com%2F"
+            />
+            <param name="embed_code_version" value="3" />
+            <param name="path" value="shared&#47;6CYDM7W2C" />
+            <param name="toolbar" value="yes" />
+            <param
+              name="static_image"
+              value="https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;6C&#47;6CYDM7W2C&#47;1.png"
+            />
+            <param name="animate_transition" value="yes" />
+            <param name="display_static_image" value="yes" />
+            <param name="display_spinner" value="yes" />
+            <param name="display_overlay" value="yes" />
+            <param name="display_count" value="yes" />
+            <param name="language" value="en-US" />
+            <param name="filter" value="publish=yes" />
+          </object>
+        </div>
+        <script type="text/javascript">
+          var divElement = document.getElementById("viz1674670965993");
+          var vizElement = divElement.getElementsByTagName("object")[0];
+          if (divElement.offsetWidth > 800) {
+            vizElement.style.width = "100%";
+            vizElement.style.height = divElement.offsetWidth * 0.75 + "px";
+          } else if (divElement.offsetWidth > 500) {
+            vizElement.style.width = "100%";
+            vizElement.style.height = divElement.offsetWidth * 0.75 + "px";
+          } else {
+            vizElement.style.width = "100%";
+            vizElement.style.height = "1277px";
+          }
+          var scriptElement = document.createElement("script");
+          scriptElement.src =
+            "https://public.tableau.com/javascripts/api/viz_v1.js";
+          vizElement.parentNode.insertBefore(scriptElement, vizElement);
+        </script>
+      </div>
+
+      <!-- Footer -->
+      <footer>
+        <div class="w3-black w3-center w3-padding-24">
+          <p>&copy 2021 Jonathan Chen</p>
+        </div>
+      </footer>
+
+      <!-- End page content -->
+    </div>
+
+    <script>
+      // Script to open and close sidebar
+      function w3_open() {
+        document.getElementById("mySidebar").style.opacity = "1";
+        document.getElementById("mySidebar").style.animation = "myMove .5s 1";
+        document.getElementById("mySidebar").style.display = "block";
+        document.getElementById("myOverlay").style.display = "block";
+      }
+
+      function w3_close() {
+        document.getElementById("mySidebar").style.opacity = ".6";
+        document.getElementById("mySidebar").style.display = "none";
+        document.getElementById("myOverlay").style.display = "none";
+      }
+    </script>
+  </body>
+</html>
