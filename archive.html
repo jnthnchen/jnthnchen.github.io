@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+  <title>Jonathan Chen</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
+  <link
+    rel="stylesheet"
+    href="https://fonts.googleapis.com/css?family=Raleway"
+  />
+  <style>
+    body,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5 {
+      font-family: "Raleway", sans-serif;
+    }
+    @keyframes myMove {
+      from {
+        left: -300px;
+      }
+      to {
+        left: 0px;
+      }
+    }
+  </style>
+  <script type="text/javascript" src="particles.js" defer></script>
+  <script type="text/javascript" src="app.js" defer></script>
+  <!--App uses custom code from config file, if want original code w/user response then download app again and use original app code-->
+  <body class="w3-light-grey w3-content" style="min-width: 100%">
+    <!-- Sidebar/menu -->
+    <div id="particles-js"></div>
+    <nav
+      class="w3-sidebar w3-bar-block w3-white w3-text-black w3-collapse w3-top w3-center w3-opacity"
+      style="z-index: 3; width: 300px; font-weight: bold"
+      id="mySidebar"
+    >
+      <br />
+      <h3 class="w3-padding-64 w3-center">
+        <b>JONATHAN<br />CHEN</b>
+      </h3>
+      <a
+        href="index.html#about"
+        onclick="w3_close()"
+        class="w3-bar-item w3-button"
+        >ABOUT</a
+      >
+      <a href="archive.html" onclick="w3_close()" class="w3-bar-item w3-button"
+        >ARCHIVE</a
+      >
+    </nav>
+
+    <!-- Top menu on small screens -->
+    <header
+      class="w3-container w3-top w3-hide-large w3-white w3-xlarge"
+      style="z-index: 3"
+    >
+      <span class="w3-left w3-padding">JONATHAN CHEN</span>
+      <a
+        href="javascript:void(0)"
+        class="w3-right w3-button w3-white"
+        onclick="w3_open()"
+        >☰</a
+      >
+    </header>
+
+    <!-- Overlay effect when opening sidebar on small screens -->
+    <div
+      class="w3-overlay w3-hide-large w3-animate-opacity"
+      onclick="w3_close()"
+      style="cursor: pointer"
+      title="close side menu"
+      id="myOverlay"
+    ></div>
+
+    <!-- !PAGE CONTENT! -->
+    <div class="w3-main" style="margin-left: 300px">
+      <!-- Push down content on small screens -->
+      <div class="w3-hide-large" style="margin-top: 83px"></div>
+
+      <!-- Projects section -->
+      <div
+        class="w3-container w3-light-grey w3-padding-32 w3-padding-large"
+        id="projects"
+        style="min-height: 100vh"
+      >
+        <h2 class="w3-center" style="margin-top: 10%">
+          <b>Project Archive</b>
+        </h2>
+        <div class="timeline">
+          <div class="container left">
+            <div class="content">
+              <h5>2023 <span class="green">Data</span> | Visualization</h5>
+              <p>
+                Visualization of salaries data using Tableau.
+                <a href="project15.html">More</a>
+              </p>
+            </div>
+          </div>
+          <div class="container right">
+            <div class="content">
+              <h5>2022 <span class="green">Data</span> | Science</h5>
+              <p>
+                Cleaning of salaries data using OpenRefine. Analysis,
+                visualization, and prediction using Python.
+                <a href="project14.html">More</a>
+              </p>
+            </div>
+          </div>
+          <div class="container left">
+            <div class="content">
+              <h5>2021 <span class="blue">Web</span> | Development</h5>
+              <p>
+                Web application for nutrient management and calculations using
+                Flask.
+                <a href="project13.html">More</a>
+              </p>
+            </div>
+          </div>
+          <div class="container right">
+            <div class="content">
+              <h5>2021 <span class="green">Data</span> | Analysis</h5>
+              <p>
+                Cleaning of packaged meals data using OpenRefine. Analysis and
+                visualization using Python.
+                <a href="project12.html">More</a>
+              </p>
+            </div>
+          </div>
+          <div class="container left">
+            <div class="content">
+              <h5>2021 <span class="blue">Web</span> | Development</h5>
+              <p>
+                Website design and development of a fictional startup using
+                React.
+                <a href="project11.html">More</a>
+              </p>
+            </div>
+          </div>
+          <div class="container right">
+            <div class="content">
+              <h5>2021 <span class="blue">Web</span> | Design</h5>
+              <p>
+                Website redesign and dashboard creation for stormwater
+                management using Figma and Prezi.
+                <a href="project10.html">More</a>
+              </p>
+            </div>
+          </div>
+          <div class="container left">
+            <div class="content">
+              <h5>2021 <span class="blue">Web</span> | Development</h5>
+              <p>
+                Web application of extinct animals using Node.js and Express.
+                <a href="project9.html">More</a>
+              </p>
+            </div>
+          </div>
+          <div class="container right">
+            <div class="content">
+              <h5>2021 <span class="green">Data</span> | Design</h5>
+              <p>
+                Database design and creation for weather using MySQL.
+                <a href="project8.html">More</a>
+              </p>
+            </div>
+          </div>
+          <div class="container left">
+            <div class="content">
+              <h5>2021 <span class="red">Mobile</span> | Design</h5>
+              <p>
+                Mobile application prototype for time management using Figma.
+                <a href="project7.html">More</a>
+              </p>
+            </div>
+          </div>
+          <div class="container right">
+            <div class="content">
+              <h5>2021 <span class="green">Data</span> | Visualization</h5>
+              <p>
+                Bar chart and scatter plot recreation using Python and Adobe
+                Illustrator.
+                <a href="project6.html">More</a>
+              </p>
+            </div>
+          </div>
+          <div class="container left">
+            <div class="content">
+              <h5>2020 <span class="green">Data</span> | Analysis</h5>
+              <p>
+                Analysis and visualization of life expectancy data using R.
+                <a href="project5.html">More</a>
+              </p>
+            </div>
+          </div>
+          <div class="container right">
+            <div class="content">
+              <h5>2020 <span class="green">Data</span>| Science</h5>
+              <p>
+                Analysis, visualization, and prediction of heart attack data in
+                Python.
+                <a href="project4.html">More</a>
+              </p>
+            </div>
+          </div>
+          <div class="container left">
+            <div class="content">
+              <h5>2020 <span class="green">Data</span> | Development</h5>
+              <p>
+                Command-line program of a fictional warehouse store using
+                Python.
+                <a href="project3.html">More</a>
+              </p>
+            </div>
+          </div>
+          <div class="container right">
+            <div class="content">
+              <h5>2019 <span class="red">Mobile</span> | Development</h5>
+              <p>
+                Mobile application to prioritize seniors for home-delivered
+                meals using Thunkable X and Airtable.
+                <a href="project2.html">More</a>
+              </p>
+            </div>
+          </div>
+          <div class="container left">
+            <div class="content">
+              <h5>2018 <span class="blue">Web</span> | Development</h5>
+              <p>
+                Website modernization for a company using HTML/CSS/JS.
+                <a href="project1.html">More</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Footer -->
+      <footer>
+        <div class="w3-black w3-center w3-padding-24">
+          <p>&copy 2021 Jonathan Chen</p>
+        </div>
+      </footer>
+
+      <!-- End page content -->
+    </div>
+
+    <script>
+      // Script to open and close sidebar
+      function w3_open() {
+        document.getElementById("mySidebar").style.opacity = "1";
+        document.getElementById("mySidebar").style.animation = "myMove .5s 1";
+        document.getElementById("mySidebar").style.display = "block";
+        document.getElementById("myOverlay").style.display = "block";
+      }
+
+      function w3_close() {
+        document.getElementById("mySidebar").style.opacity = ".6";
+        document.getElementById("mySidebar").style.display = "none";
+        document.getElementById("myOverlay").style.display = "none";
+      }
+    </script>
+  </body>
+</html>
