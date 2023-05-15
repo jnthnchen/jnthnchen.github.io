@@ -129,9 +129,9 @@
           >.
         </p>
         <p>
-          First let's import all the necessary libraries. Next we will read the
-          CSV file into a dataframe and print the shape to get an idea of how
-          many rows and columns we are dealing with.
+          First, let's import all the necessary initial libraries. Next, we will
+          read the CSV file into a dataframe and print the shape to get an idea
+          of how many rows and columns we are dealing with.
         </p>
         <div class="w3-center">
           <figure>
@@ -145,9 +145,9 @@
           </figure>
         </div>
         <p>
-          Next let's use <span class="code">df.head()</span> to get the first 5
-          rows of data and get our first glimpse into what the data actually
-          looks like.
+          Let's use <span class="code">df.head()</span> to get the first 5 rows
+          of data and get our first glimpse into what the data actually looks
+          like.
         </p>
         <div class="w3-center">
           <figure>
@@ -462,16 +462,79 @@
           problems.
         </p>
         <p>
+          Is there a difference in average request closing time among the
+          complaint types? Before we answer this, let's create a new dataframe
+          that excludes animal in a park since it's an outlier. We can also
+          exclude the ferry complaint as there are no time values. Let's also
+          graph it to confirm the change. We will use this dataframe for our
+          test.
+        </p>
+        <figure>
+          <img
+            src="images/project_16_20.PNG"
+            alt="Average request closing time bar plot"
+            class="w3-image"
+            style="border-radius: 15px"
+          />
+          <figcaption class="w3-center">
+            Average request closing time
+          </figcaption>
+        </figure>
+        <p>
+          We can use an ANOVA test for this where the null hypothesis is that
+          there is no difference in average request closing time among the
+          complaint types and the alternative hypothesis is that at least one
+          complaint type differs significantly in average request closing time.
+          There are also some new imports here.
+        </p>
+        <figure>
+          <img
+            src="images/project_16_21.PNG"
+            alt="ANOVA test"
+            class="w3-image"
+            style="border-radius: 15px"
+          />
+          <figcaption class="w3-center">ANOVA test</figcaption>
+        </figure>
+        <p>
+          The p-value is less than our alpha of 0.05, so we reject the null
+          hypothesis and conclude that at least one complaint type differs
+          significantly in average request closing time.
+        </p>
+        <p>
+          Is the complaint type related to location? We can use a chi-squared
+          test of independence here by creating a contingency table with the
+          <span class="code">crosstab()</span> function and then feeding it into
+          the test. Don't forget the necessary import. Our null hypothesis is
+          that there is no relation between complaint type and location and the
+          alternative hypothesis is that there is a relation between complaint
+          type and location.
+        </p>
+        <figure>
+          <img
+            src="images/project_16_22.PNG"
+            alt="Chi-squared test"
+            class="w3-image"
+            style="border-radius: 15px"
+          />
+          <figcaption class="w3-center">Chi-squared test</figcaption>
+        </figure>
+        <p>
+          Since our p-value is less than our alpha of 0.05, we reject the null
+          hypothesis and conclude that there is a relation between complaint
+          type and location.
+        </p>
+        <p>
           Now we can create some visualizations that might be interesting using
           Tableau. But before we do that, let's fix the city names like we did
           earlier but using another method. We can use the OpenRefine facets
-          feature to do this. First we need to go the city column and choose
+          feature to do this. First, we need to go the city column and choose
           facet then text facet.
         </p>
         <div class="w3-center">
           <figure>
             <img
-              src="images/project_16_20.PNG"
+              src="images/project_16_23.PNG"
               alt="Text facet screenshot"
               class="w3-image"
               style="border-radius: 15px"
@@ -489,7 +552,7 @@
         <div class="w3-center">
           <figure>
             <img
-              src="images/project_16_21.PNG"
+              src="images/project_16_24.PNG"
               alt="Using text facet screenshot"
               class="w3-image"
               style="border-radius: 15px"
@@ -500,7 +563,7 @@
         <p>
           Below is my completed dashboard built using Tableau. You can click on
           any of the plots to narrow down data for that category and can use the
-          city selection to filter all plots by a city.
+          city selection to filter all plots by city.
         </p>
         <div
           class="tableauPlaceholder"
