@@ -48,8 +48,8 @@
         class="w3-bar-item w3-button"
         >ABOUT</a
       >
-      <a href="archive.html" onclick="w3_close()" class="w3-bar-item w3-button"
-        >ARCHIVE</a
+      <a href="project.html" onclick="w3_close()" class="w3-bar-item w3-button"
+        >PROJECT</a
       >
     </nav>
 
@@ -97,533 +97,59 @@
         </div>
       </div>
 
-      <!-- Projects section -->
+      <!--Timeline-->
       <div
         class="w3-container w3-light-grey w3-padding-32 w3-padding-large"
         id="projects"
         style="min-height: 100vh"
       >
         <h2 class="w3-center" style="margin-top: 10%">
-          <b>Featured Project</b>
+          <b>Timeline</b>
         </h2>
-        <h3 class="w3-center">Service Requests Data Analysis</h3>
-        <div class="w3-center">
-          <figure>
-            <img
-              src="images/project_16_1.PNG"
-              alt="Project screenshot"
-              class="w3-image"
-              style="border-radius: 15px"
-            />
-          </figure>
+        <div class="timeline">
+          <div class="container left">
+            <div class="content">
+              <h5><span class="red">2023</span> Started graduate school</h5>
+              <p>Data analytics master's, customer care data analyst</p>
+            </div>
+          </div>
+          <div class="container right">
+            <div class="content">
+              <h5><span class="blue">2022</span> First full-time job</h5>
+              <p>Junior IT engineer</p>
+            </div>
+          </div>
+          <div class="container left">
+            <div class="content">
+              <h5><span class="green">2021</span> Finished college</h5>
+              <p>Web application developer</p>
+            </div>
+          </div>
+          <div class="container right">
+            <div class="content">
+              <h5><span class="red">2020</span> Major change</h5>
+              <p>Information science major</p>
+            </div>
+          </div>
+          <div class="container left">
+            <div class="content">
+              <h5><span class="blue">2019</span> First jobs</h5>
+              <p>Mobile application developer, pharmacy technician</p>
+            </div>
+          </div>
+          <div class="container right">
+            <div class="content">
+              <h5><span class="green">2018</span> First college internship</h5>
+              <p>Web development intern, dietetics major</p>
+            </div>
+          </div>
+          <div class="container left">
+            <div class="content">
+              <h5><span class="red">2017</span> Started college</h5>
+              <p>Undecided major</p>
+            </div>
+          </div>
         </div>
-
-        <p>
-          The goal of this project is to explore, analyze, and visualize a
-          dataset while incorporating a variety of tools and techniques. A
-          webpage version of the Jupyter notebook can be accessed
-          <a href="serviceRequests.html" target="_blank">here</a> and a GitHub
-          repository of all the files including the dataset can be found
-          <a href="https://github.com/jnthnchen/ServiceRequests" target="_blank"
-            >here</a
-          >.
-        </p>
-        <p>
-          First, let's import all the necessary initial libraries. Next, we will
-          read the CSV file into a dataframe and print the shape to get an idea
-          of how many rows and columns we are dealing with.
-        </p>
-        <div class="w3-center">
-          <figure>
-            <img
-              src="images/project_16_2.PNG"
-              alt="Imports and data screenshot"
-              class="w3-image"
-              style="border-radius: 15px"
-            />
-            <figcaption class="w3-center">Imports and data</figcaption>
-          </figure>
-        </div>
-        <p>
-          Let's use <span class="code">df.head()</span> to get the first 5 rows
-          of data and get our first glimpse into what the data actually looks
-          like.
-        </p>
-        <div class="w3-center">
-          <figure>
-            <img
-              src="images/project_16_3.PNG"
-              alt="First five rows screenshot"
-              class="w3-image"
-              style="border-radius: 15px"
-            />
-            <figcaption class="w3-center">First five rows</figcaption>
-          </figure>
-        </div>
-        <p>
-          In this case we can already see that there are columns with NA values,
-          but we may not always be able to see that just from
-          <span class="code">df.head()</span> since some datasets are very
-          large, so we will comprehensively check for NA values using
-          <span class="code">df.isna().sum(axis=0)</span>.
-        </p>
-        <div class="w3-center">
-          <figure>
-            <img
-              src="images/project_16_4.PNG"
-              alt="Check data for NA values screenshot"
-              class="w3-image"
-              style="border-radius: 15px"
-            />
-            <figcaption class="w3-center">Check data for NA values</figcaption>
-          </figure>
-        </div>
-        <p>
-          If we scroll through the list we can see that there are several
-          columns that have a ton of NA values. Since columns with lots of NA
-          values are not very useful, we can remove them by using
-          <span class="code"
-            >df = df.loc[:, df.isna().sum() < 0.75*df.shape[0]]</span
-          >, which removes all columns that have greater than 75% NA values. Now
-          let's check for NA values again to confirm that certain columns are
-          removed.
-        </p>
-        <div class="w3-center">
-          <figure>
-            <img
-              src="images/project_16_5.PNG"
-              alt="Remove columns with greater than 75% NA values screenshot"
-              class="w3-image"
-              style="border-radius: 15px"
-            />
-            <figcaption class="w3-center">
-              Remove columns with greater than 75% NA values
-            </figcaption>
-          </figure>
-        </div>
-        <p>
-          We can also take a look at the data types and identify any potential
-          issues by using <span class="code">df.dtypes</span>.
-        </p>
-        <div class="w3-center">
-          <figure>
-            <img
-              src="images/project_16_6.PNG"
-              alt="Check data types screenshot"
-              class="w3-image"
-              style="border-radius: 15px"
-            />
-            <figcaption class="w3-center">Check data types</figcaption>
-          </figure>
-        </div>
-        <p>
-          There are some data fields that should probably be date type, so we
-          can use the <span class="code">astype()</span> method to convert them
-          to date type. Now let's check the data types again to confirm the
-          change.
-        </p>
-        <div class="w3-center">
-          <figure>
-            <img
-              src="images/project_16_7.PNG"
-              alt="Change date columns to date type screenshot"
-              class="w3-image"
-              style="border-radius: 15px"
-            />
-            <figcaption class="w3-center">
-              Change date columns to date type
-            </figcaption>
-          </figure>
-        </div>
-        <p>
-          We can also check for weird date errors by making sure that there are
-          no created dates that occur after the closed date by using
-          <span class="code"
-            >df.loc[df['Created Date']>=df['Closed Date']].shape</span
-          >. The test passed so let's take a look at the city names to see if
-          there are any potential issues here by using the
-          <span class="code">unique()</span> method for the city column.
-        </p>
-        <div class="w3-center">
-          <figure>
-            <img
-              src="images/project_16_8.PNG"
-              alt="Valid dates test and check city names screenshot"
-              class="w3-image"
-              style="border-radius: 15px"
-            />
-            <figcaption class="w3-center">
-              Valid dates test and check city names
-            </figcaption>
-          </figure>
-        </div>
-        <p>
-          There seems to be several cities that appear twice as both upper case
-          and title case, so let's fix this by just making everything upper case
-          through a function. Now we can check the city names again to confirm
-          the fix.
-        </p>
-        <div class="w3-center">
-          <figure>
-            <img
-              src="images/project_16_9.PNG"
-              alt="Make all city names upper case screenshot"
-              class="w3-image"
-              style="border-radius: 15px"
-            />
-            <figcaption class="w3-center">
-              Make all city names upper case
-            </figcaption>
-          </figure>
-        </div>
-        <p>
-          Let's start visualizing our data with a bar plot of the frequency of
-          complaints for each city. We can see that Brooklyn has the most
-          complaints, followed by New York and Bronx.
-        </p>
-        <div class="w3-center">
-          <figure>
-            <img
-              src="images/project_16_10.PNG"
-              alt="Frequency of complaints for each city bar plot"
-              class="w3-image"
-              style="border-radius: 15px"
-            />
-            <figcaption class="w3-center">
-              Frequency of complaints for each city
-            </figcaption>
-          </figure>
-        </div>
-        <p>
-          To explore Brooklyn a little more, let's create a dataframe of just
-          Brookyln rows by using
-          <span class="code">df_brooklyn=df[df['City'] == "BROOKLYN"]</span>.
-          Let's plot a scatter plot of complaint concentration in Brooklyn based
-          on its latitude and longitude.
-        </p>
-        <div class="w3-center">
-          <figure>
-            <img
-              src="images/project_16_11.PNG"
-              alt="Complaint concentration in Brooklyn scatter plot"
-              class="w3-image"
-              style="border-radius: 15px"
-            />
-            <figcaption class="w3-center">
-              Complaint concentration in Brooklyn
-            </figcaption>
-          </figure>
-        </div>
-        <p>
-          This scatter plot does not tell us very much as there is probably a
-          lot of overlap, so let's try doing the same thing using a hexbin plot
-          to better visualize density.
-        </p>
-        <div class="w3-center">
-          <figure>
-            <img
-              src="images/project_16_12.PNG"
-              alt="Complaint concentration in Brooklyn hexbin plot"
-              class="w3-image"
-              style="border-radius: 15px"
-            />
-            <figcaption class="w3-center">
-              Complaint concentration in Brooklyn
-            </figcaption>
-          </figure>
-        </div>
-        <p>
-          Instead of visualizing the number of complaints for cities, let's see
-          how the number of different complaint types compare to each other my
-          creating a bar plot for frequency of complaints. We can also use the
-          <span class="code">head()</span> method to get the top x number of
-          complaints listed out.
-        </p>
-        <div class="w3-center">
-          <figure>
-            <img
-              src="images/project_16_13.PNG"
-              alt="Frequency of complaints bar plot and screenshot"
-              class="w3-image"
-              style="border-radius: 15px"
-            />
-            <figcaption class="w3-center">Frequency of complaints</figcaption>
-          </figure>
-        </div>
-        <p>
-          Let's now explore the most common complaint in each city as well as
-          its count.
-        </p>
-        <div class="w3-center">
-          <figure>
-            <img
-              src="images/project_16_14.PNG"
-              alt="Top complaint in each city screenshot"
-              class="w3-image"
-              style="border-radius: 15px"
-            />
-            <figcaption class="w3-center">
-              Top complaint in each city
-            </figcaption>
-          </figure>
-        </div>
-        <p>
-          It's pretty clear that blocked driveway and illegal parking are the
-          most common complaints in most of these cities. Let's visualize this
-          but just for Brooklyn again. Instead of doing another bar plot, we can
-          make it interesting by creating a word cloud, which can more easily
-          reach a wide array of audiences.
-        </p>
-        <div class="w3-center">
-          <figure>
-            <img
-              src="images/project_16_15.PNG"
-              alt="Complaints in Brooklyn word cloud"
-              class="w3-image"
-              style="border-radius: 15px"
-            />
-            <figcaption class="w3-center">Complaints in Brooklyn</figcaption>
-          </figure>
-        </div>
-        <p>
-          Finally, let's explore the time it takes to close a complaint. Since
-          we do not have such a column, we can create a time difference column
-          and reformat it into a request closing time column.
-        </p>
-        <div class="w3-center">
-          <figure>
-            <img
-              src="images/project_16_16.PNG"
-              alt="Create time difference and request closing time columns screenshot"
-              class="w3-image"
-              style="border-radius: 15px"
-            />
-            <figcaption class="w3-center">
-              Create time difference and request closing time
-            </figcaption>
-          </figure>
-        </div>
-        <p>
-          Let's use the <span class="code">head()</span> method to view our new
-          columns.
-        </p>
-        <div class="w3-center">
-          <figure>
-            <img
-              src="images/project_16_17.PNG"
-              alt="Time difference and request closing time columns screenshot"
-              class="w3-image"
-              style="border-radius: 15px"
-            />
-            <figcaption class="w3-center">
-              Time difference and request closing time columns
-            </figcaption>
-          </figure>
-        </div>
-        <p>
-          Now that we have the request closing time column, we can visualize
-          this using a bar plot to see which complaints take the longest to
-          close on average.
-        </p>
-        <div class="w3-center">
-          <figure>
-            <img
-              src="images/project_16_18.PNG"
-              alt="Average request closing time bar plot"
-              class="w3-image"
-              style="border-radius: 15px"
-            />
-            <figcaption class="w3-center">
-              Average request closing time
-            </figcaption>
-          </figure>
-        </div>
-        <p>
-          The animal in a park complaint type seems like an outlier, so let's
-          plot the bar plot again while ignoring that complaint.
-        </p>
-        <div class="w3-center">
-          <figure>
-            <img
-              src="images/project_16_19.PNG"
-              alt="Average request closing time bar plot"
-              class="w3-image"
-              style="border-radius: 15px"
-            />
-            <figcaption class="w3-center">
-              Average request closing time
-            </figcaption>
-          </figure>
-        </div>
-        <p>
-          Without the animal in a park complaint, derelict vehicle and graffiti
-          complaints take the longest to close on average. So a recommendation
-          could be to focus more on tackling derelict vehicle and graffiti
-          problems.
-        </p>
-        <p>
-          Is there a difference in average request closing time among the
-          complaint types? Before we answer this, let's create a new dataframe
-          that excludes animal in a park since it's an outlier. We can also
-          exclude the ferry complaint as there are no time values. Let's also
-          graph it to confirm the change. We will use this dataframe for our
-          test.
-        </p>
-        <figure>
-          <img
-            src="images/project_16_20.PNG"
-            alt="Average request closing time bar plot"
-            class="w3-image"
-            style="border-radius: 15px"
-          />
-          <figcaption class="w3-center">
-            Average request closing time
-          </figcaption>
-        </figure>
-        <p>
-          We can use an ANOVA test for this where the null hypothesis is that
-          there is no difference in average request closing time among the
-          complaint types and the alternative hypothesis is that at least one
-          complaint type differs significantly in average request closing time.
-          There are also some new imports here.
-        </p>
-        <div class="w3-center">
-          <figure>
-            <img
-              src="images/project_16_21.PNG"
-              alt="ANOVA test"
-              class="w3-image"
-              style="border-radius: 15px"
-            />
-            <figcaption class="w3-center">ANOVA test</figcaption>
-          </figure>
-        </div>
-        <p>
-          The p-value is less than our alpha of 0.05, so we reject the null
-          hypothesis and conclude that at least one complaint type differs
-          significantly in average request closing time.
-        </p>
-        <p>
-          Is the complaint type related to location? We can use a chi-squared
-          test of independence here by creating a contingency table with the
-          <span class="code">crosstab()</span> function and then feeding it into
-          the test. Don't forget the necessary import. Our null hypothesis is
-          that there is no relation between complaint type and location and the
-          alternative hypothesis is that there is a relation between complaint
-          type and location.
-        </p>
-        <div class="w3-center">
-          <figure>
-            <img
-              src="images/project_16_22.PNG"
-              alt="Chi-squared test"
-              class="w3-image"
-              style="border-radius: 15px"
-            />
-            <figcaption class="w3-center">Chi-squared test</figcaption>
-          </figure>
-        </div>
-        <p>
-          Since our p-value is less than our alpha of 0.05, we reject the null
-          hypothesis and conclude that there is a relation between complaint
-          type and location.
-        </p>
-        <p>
-          Now we can create some visualizations that might be interesting using
-          Tableau. But before we do that, let's fix the city names like we did
-          earlier but using another method. We can use the OpenRefine facets
-          feature to do this. First, we need to go the city column and choose
-          facet then text facet.
-        </p>
-        <div class="w3-center">
-          <figure>
-            <img
-              src="images/project_16_23.PNG"
-              alt="Text facet screenshot"
-              class="w3-image"
-              style="border-radius: 15px"
-            />
-            <figcaption class="w3-center">Text facet</figcaption>
-          </figure>
-        </div>
-        <p>
-          Then we just need to edit the city names that are title case by
-          converting them to all upper case. You can now extract this cleaned
-          CSV version for use in Tableau. My extract operation history as JSON
-          is included in the GitHub repository, which can be used to instantly
-          apply everything I did.
-        </p>
-        <div class="w3-center">
-          <figure>
-            <img
-              src="images/project_16_24.PNG"
-              alt="Using text facet screenshot"
-              class="w3-image"
-              style="border-radius: 15px"
-            />
-            <figcaption class="w3-center">Using text facet</figcaption>
-          </figure>
-        </div>
-        <p>
-          Below is my completed dashboard built using Tableau. You can click on
-          any of the plots to narrow down data for that category and can use the
-          city selection to filter all plots by city.
-        </p>
-        <div
-          class="tableauPlaceholder"
-          id="viz1682779462182"
-          style="position: relative"
-        >
-          <noscript
-            ><a href="#"
-              ><img
-                alt="Dashboard 1 "
-                src="https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Se&#47;ServiceRequests_16826445265590&#47;Dashboard1&#47;1_rss.png"
-                style="border: none" /></a></noscript
-          ><object class="tableauViz" style="display: none">
-            <param
-              name="host_url"
-              value="https%3A%2F%2Fpublic.tableau.com%2F"
-            />
-            <param name="embed_code_version" value="3" />
-            <param name="site_root" value="" />
-            <param
-              name="name"
-              value="ServiceRequests_16826445265590&#47;Dashboard1"
-            />
-            <param name="tabs" value="no" />
-            <param name="toolbar" value="yes" />
-            <param
-              name="static_image"
-              value="https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Se&#47;ServiceRequests_16826445265590&#47;Dashboard1&#47;1.png"
-            />
-            <param name="animate_transition" value="yes" />
-            <param name="display_static_image" value="yes" />
-            <param name="display_spinner" value="yes" />
-            <param name="display_overlay" value="yes" />
-            <param name="display_count" value="yes" />
-            <param name="language" value="en-US" />
-            <param name="filter" value="publish=yes" />
-          </object>
-        </div>
-        <script type="text/javascript">
-          var divElement = document.getElementById("viz1682779462182");
-          var vizElement = divElement.getElementsByTagName("object")[0];
-          if (divElement.offsetWidth > 800) {
-            vizElement.style.width = "100%";
-            vizElement.style.height = divElement.offsetWidth * 0.75 + "px";
-          } else if (divElement.offsetWidth > 500) {
-            vizElement.style.width = "100%";
-            vizElement.style.height = divElement.offsetWidth * 0.75 + "px";
-          } else {
-            vizElement.style.width = "100%";
-            vizElement.style.height = "1727px";
-          }
-          var scriptElement = document.createElement("script");
-          scriptElement.src =
-            "https://public.tableau.com/javascripts/api/viz_v1.js";
-          vizElement.parentNode.insertBefore(scriptElement, vizElement);
-        </script>
       </div>
 
       <!-- Footer -->
