@@ -463,7 +463,7 @@
         </p>
         <p>
           Is the complaint type related to location in df? We can use a
-          chi-squared test of independence here by creating a contingency table
+          chi-square test of independence here by creating a contingency table
           with the
           <span class="code">crosstab()</span> function and then feeding it into
           the test. Our null hypothesis is that there is no relation between
@@ -474,7 +474,7 @@
           <figure>
             <img
               src="images/project_16_20.PNG"
-              alt="Chi-squared test"
+              alt="Chi-square test"
               class="w3-image"
               style="border-radius: 15px"
             />
@@ -532,7 +532,7 @@
         <p>
           An alternative way to do these tests is to use R, which is great for
           statistical testing. We can export df and df2 as csv and use them here
-          for the data sources. For the chi-squared test, we can use the
+          for the data sources. For the chi-square test, we can use the
           <span class="code">table()</span> function to create the contingency
           table, and use <span class="code">chisq.test()</span> for the test. We
           can see we get the same result as the Python method.
