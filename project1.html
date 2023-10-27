@@ -48,8 +48,11 @@
         class="w3-bar-item w3-button"
         >ABOUT</a
       >
-      <a href="project.html" onclick="w3_close()" class="w3-bar-item w3-button"
-        >PROJECT</a
+      <a href="project1.html" onclick="w3_close()" class="w3-bar-item w3-button"
+        >PROJECT 1</a
+      >
+      <a href="project2.html" onclick="w3_close()" class="w3-bar-item w3-button"
+        >PROJECT 2</a
       >
     </nav>
 
@@ -273,6 +276,38 @@
           </figure>
         </div>
         <p>
+          Another way to do this is to use OpenRefine's facet feature to do
+          this. First, we need to go the city column and choose facet then text
+          facet.
+        </p>
+        <div class="w3-center">
+          <figure>
+            <img
+              src="images/project_16_10.PNG"
+              alt="Text facet screenshot"
+              class="w3-image"
+              style="border-radius: 15px"
+            />
+            <figcaption class="w3-center">Text facet</figcaption>
+          </figure>
+        </div>
+        <p>
+          Then we just need to edit the city names that are title case by
+          converting them to all upper case. You can now extract this cleaned
+          CSV version for use.
+        </p>
+        <div class="w3-center">
+          <figure>
+            <img
+              src="images/project_16_11.PNG"
+              alt="Using text facet screenshot"
+              class="w3-image"
+              style="border-radius: 15px"
+            />
+            <figcaption class="w3-center">Using text facet</figcaption>
+          </figure>
+        </div>
+        <p>
           Let's start visualizing our data with a bar plot of the frequency of
           complaints for each city. We can see that Brooklyn has the most
           complaints, followed by New York and Bronx.
@@ -280,7 +315,7 @@
         <div class="w3-center">
           <figure>
             <img
-              src="images/project_16_10.PNG"
+              src="images/project_16_12.PNG"
               alt="Frequency of complaints for each city bar plot"
               class="w3-image"
               style="border-radius: 15px"
@@ -302,7 +337,7 @@
         <div class="w3-center">
           <figure>
             <img
-              src="images/project_16_11.PNG"
+              src="images/project_16_13.PNG"
               alt="Complaint concentration in Brooklyn scatter plot"
               class="w3-image"
               style="border-radius: 15px"
@@ -320,7 +355,7 @@
         <div class="w3-center">
           <figure>
             <img
-              src="images/project_16_12.PNG"
+              src="images/project_16_14.PNG"
               alt="Complaint concentration in Brooklyn hexbin plot"
               class="w3-image"
               style="border-radius: 15px"
@@ -340,7 +375,7 @@
         <div class="w3-center">
           <figure>
             <img
-              src="images/project_16_13.PNG"
+              src="images/project_16_15.PNG"
               alt="Frequency of complaints bar plot and screenshot"
               class="w3-image"
               style="border-radius: 15px"
@@ -355,7 +390,7 @@
         <div class="w3-center">
           <figure>
             <img
-              src="images/project_16_14.PNG"
+              src="images/project_16_16.PNG"
               alt="Top complaint in each city screenshot"
               class="w3-image"
               style="border-radius: 15px"
@@ -375,7 +410,7 @@
         <div class="w3-center">
           <figure>
             <img
-              src="images/project_16_15.PNG"
+              src="images/project_16_17.PNG"
               alt="Complaints in Brooklyn word cloud"
               class="w3-image"
               style="border-radius: 15px"
@@ -391,7 +426,7 @@
         <div class="w3-center">
           <figure>
             <img
-              src="images/project_16_16.PNG"
+              src="images/project_16_18.PNG"
               alt="Create time difference and request closing time columns screenshot"
               class="w3-image"
               style="border-radius: 15px"
@@ -408,7 +443,7 @@
         <div class="w3-center">
           <figure>
             <img
-              src="images/project_16_17.PNG"
+              src="images/project_16_19.PNG"
               alt="Time difference and request closing time columns screenshot"
               class="w3-image"
               style="border-radius: 15px"
@@ -426,7 +461,7 @@
         <div class="w3-center">
           <figure>
             <img
-              src="images/project_16_18.PNG"
+              src="images/project_16_20.PNG"
               alt="Average request closing time bar plot"
               class="w3-image"
               style="border-radius: 15px"
@@ -443,7 +478,7 @@
         <div class="w3-center">
           <figure>
             <img
-              src="images/project_16_19.PNG"
+              src="images/project_16_21.PNG"
               alt="Average request closing time bar plot"
               class="w3-image"
               style="border-radius: 15px"
@@ -454,15 +489,33 @@
           </figure>
         </div>
         <p>
-          Without the animal in a park complaint, derelict vehicle and graffiti
-          complaints take the longest to close on average. So a recommendation
-          could be to focus more on tackling derelict vehicle and graffiti
-          problems. However, the frequency of graffiti complaints is very low as
-          we saw from the complaint frequency chart, so focusing on resolving
-          derelict vehicles is more important.
+          The ferry complaint has no values so we can also exclude that. Let's
+          create a new dataframe df2 for this.
+        </p>
+        <div class="w3-center">
+          <figure>
+            <img
+              src="images/project_16_22.PNG"
+              alt="Average request closing time bar plot"
+              class="w3-image"
+              style="border-radius: 15px"
+            />
+            <figcaption class="w3-center">
+              Average request closing time
+            </figcaption>
+          </figure>
+        </div>
+        <p>
+          Which complaints should we recommend to allocate more resources on
+          resolving? Without the animal in a park complaint, derelict vehicle
+          and graffiti complaints take the longest to close on average. So a
+          recommendation could be to focus more on tackling derelict vehicle and
+          graffiti problems. However, the frequency of graffiti complaints is
+          very low as we saw from the complaint frequency chart, so focusing on
+          resolving derelict vehicles is more important.
         </p>
         <p>
-          Is the complaint type related to location in df? We can use a
+          Is the complaint type related to location in df2? We can use a
           chi-square test of independence here by creating a contingency table
           with the
           <span class="code">crosstab()</span> function and then feeding it into
@@ -473,7 +526,7 @@
         <div class="w3-center">
           <figure>
             <img
-              src="images/project_16_20.PNG"
+              src="images/project_16_23.PNG"
               alt="Chi-square test"
               class="w3-image"
               style="border-radius: 15px"
@@ -494,19 +547,7 @@
           also graph it to confirm the change. We will use this dataframe for
           our test.
         </p>
-        <div class="w3-center">
-          <figure>
-            <img
-              src="images/project_16_21.PNG"
-              alt="Average request closing time bar plot"
-              class="w3-image"
-              style="border-radius: 15px"
-            />
-            <figcaption class="w3-center">
-              Average request closing time
-            </figcaption>
-          </figure>
-        </div>
+
         <p>
           We can use an ANOVA test for this where the null hypothesis is that
           there is no difference in average request closing time among the
@@ -516,7 +557,7 @@
         <div class="w3-center">
           <figure>
             <img
-              src="images/project_16_22.PNG"
+              src="images/project_16_24.PNG"
               alt="ANOVA test"
               class="w3-image"
               style="border-radius: 15px"
@@ -531,8 +572,8 @@
         </p>
         <p>
           An alternative way to do these tests is to use R, which is great for
-          statistical testing. We can export df and df2 as csv and use them here
-          for the data sources. For the chi-square test, we can use the
+          statistical testing. We can export df2 as CSV and use it here for the
+          data sources. For the chi-square test, we can use the
           <span class="code">table()</span> function to create the contingency
           table, and use <span class="code">chisq.test()</span> for the test. We
           can see we get the same result as the Python method.
@@ -540,7 +581,7 @@
         <div class="w3-center">
           <figure>
             <img
-              src="images/project_16_23.PNG"
+              src="images/project_16_25.PNG"
               alt="Chi-square test"
               class="w3-image"
               style="border-radius: 15px"
@@ -549,7 +590,7 @@
           </figure>
           <figure>
             <img
-              src="images/project_16_24.PNG"
+              src="images/project_16_26.PNG"
               alt="Chi-square test results"
               class="w3-image"
               style="border-radius: 15px"
@@ -564,7 +605,7 @@
         <div class="w3-center">
           <figure>
             <img
-              src="images/project_16_25.PNG"
+              src="images/project_16_27.PNG"
               alt="ANOVA test"
               class="w3-image"
               style="border-radius: 15px"
@@ -573,7 +614,7 @@
           </figure>
           <figure>
             <img
-              src="images/project_16_26.PNG"
+              src="images/project_16_28.PNG"
               alt="ANOVA test results"
               class="w3-image"
               style="border-radius: 15px"
@@ -582,43 +623,9 @@
           </figure>
         </div>
         <p>
-          Now we can create some visualizations that might be interesting using
-          Tableau. But before we do that, let's fix the city names like we did
-          earlier but using another method. We can use the OpenRefine facets
-          feature to do this. First, we need to go the city column and choose
-          facet then text facet.
-        </p>
-        <div class="w3-center">
-          <figure>
-            <img
-              src="images/project_16_27.PNG"
-              alt="Text facet screenshot"
-              class="w3-image"
-              style="border-radius: 15px"
-            />
-            <figcaption class="w3-center">Text facet</figcaption>
-          </figure>
-        </div>
-        <p>
-          Then we just need to edit the city names that are title case by
-          converting them to all upper case. You can now extract this cleaned
-          CSV version for use in Tableau.
-        </p>
-        <div class="w3-center">
-          <figure>
-            <img
-              src="images/project_16_28.PNG"
-              alt="Using text facet screenshot"
-              class="w3-image"
-              style="border-radius: 15px"
-            />
-            <figcaption class="w3-center">Using text facet</figcaption>
-          </figure>
-        </div>
-        <p>
-          Below is my completed dashboard built using Tableau. You can click on
-          any of the plots to narrow down data for that category and can use the
-          city selection to filter all plots by city.
+          Below is my completed dynamic dashboard built using Tableau. You can
+          click on any of the plots to narrow down data for that category and
+          can use the city selection to filter all plots by city.
         </p>
         <div
           class="tableauPlaceholder"
@@ -676,7 +683,7 @@
           vizElement.parentNode.insertBefore(scriptElement, vizElement);
         </script>
         <p>
-          We can also df.csv to create a dashboard using Power BI. This is
+          We can also df2.csv to create a dashboard using Power BI. This is
           interactive as well and filters similarly to the one from Tableau, but
           unfortunately the version here is not interactive as it requires a
           work or school email to embed.
@@ -696,7 +703,7 @@
           Finally, we can use Excel pivots to further explore or verify some
           information. For instance, how can we confirm that we have ~8k
           complaints from the ribbon chart above in March for the Brookyln
-          borough? To do this, let's first create another column in df of the
+          borough? To do this, let's first create another column in df2 of the
           created month so that we can easily use this field in the pivot to
           answer our question.
         </p>

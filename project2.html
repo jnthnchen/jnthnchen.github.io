@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+  <title>Jonathan Chen</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
+  <link
+    rel="stylesheet"
+    href="https://fonts.googleapis.com/css?family=Raleway"
+  />
+  <style>
+    body,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5 {
+      font-family: "Raleway", sans-serif;
+    }
+    @keyframes myMove {
+      from {
+        left: -300px;
+      }
+      to {
+        left: 0px;
+      }
+    }
+  </style>
+  <script type="text/javascript" src="particles.js" defer></script>
+  <script type="text/javascript" src="app.js" defer></script>
+  <!--App uses custom code from config file, if want original code w/user response then download app again and use original app code-->
+  <body class="w3-light-grey w3-content" style="min-width: 100%">
+    <!-- Sidebar/menu -->
+    <div id="particles-js"></div>
+    <nav
+      class="w3-sidebar w3-bar-block w3-white w3-text-black w3-collapse w3-top w3-center w3-opacity"
+      style="z-index: 3; width: 300px; font-weight: bold"
+      id="mySidebar"
+    >
+      <br />
+      <h3 class="w3-padding-64 w3-center">
+        <b>JONATHAN<br />CHEN</b>
+      </h3>
+      <a
+        href="index.html#about"
+        onclick="w3_close()"
+        class="w3-bar-item w3-button"
+        >ABOUT</a
+      >
+      <a href="project1.html" onclick="w3_close()" class="w3-bar-item w3-button"
+        >PROJECT 1</a
+      >
+      <a href="project2.html" onclick="w3_close()" class="w3-bar-item w3-button"
+        >PROJECT 2</a
+      >
+    </nav>
+
+    <!-- Top menu on small screens -->
+    <header
+      class="w3-container w3-top w3-hide-large w3-white w3-xlarge"
+      style="z-index: 3"
+    >
+      <span class="w3-left w3-padding">JONATHAN CHEN</span>
+      <a
+        href="javascript:void(0)"
+        class="w3-right w3-button w3-white"
+        onclick="w3_open()"
+        >☰</a
+      >
+    </header>
+
+    <!-- Overlay effect when opening sidebar on small screens -->
+    <div
+      class="w3-overlay w3-hide-large w3-animate-opacity"
+      onclick="w3_close()"
+      style="cursor: pointer"
+      title="close side menu"
+      id="myOverlay"
+    ></div>
+
+    <!-- !PAGE CONTENT! -->
+    <div class="w3-main" style="margin-left: 300px">
+      <!-- Push down content on small screens -->
+      <div class="w3-hide-large" style="margin-top: 83px"></div>
+
+      <!-- Projects section -->
+      <div
+        class="w3-container w3-light-grey w3-padding-32 w3-padding-large"
+        id="projects"
+        style="min-height: 100vh"
+      >
+        <h2 class="w3-center" style="margin-top: 10%">
+          <b>Featured Project</b>
+        </h2>
+        <h3 class="w3-center">Spam Classification Data Science</h3>
+        <div class="w3-center">
+          <figure>
+            <img
+              src="images/project_17_1.PNG"
+              alt="Project screenshot"
+              class="w3-image"
+              style="border-radius: 15px"
+            />
+          </figure>
+        </div>
+
+        <p>
+          As the saying goes, AI won't replace humans, but humans with AI will
+          replace those without it. The point is that while we don't necessarily
+          need to know how to develop emerging tools, we better know how to use
+          them. The goal of this project is to show how to do basic data
+          classification using both a rule-based approach as well as a model. A
+          webpage version of the Jupyter notebook can be accessed
+          <a href="spamClassification.html" target="_blank">here</a> and a
+          GitHub repository of the files can be found
+          <a href="https://github.com/jnthnchen/Spam" target="_blank">here</a>.
+        </p>
+        <p>
+          Imagine being given a task to classify unlabeled text data as either
+          spam or not spam. One way is to use a rule-based approach to develop
+          some sort of rule where text that more closely match the rule are more
+          likely to be classified as a certain something.
+        </p>
+        <p>
+          We start with two text files, one that contains spam and the other
+          non-spam. We know these text files are correctly labeled because they
+          were taken from a labeled dataset. Another way we could confirm that
+          it is correct is through some authoratative source like expert
+          knowledge. Let's use these sample files to develop our rule.
+        </p>
+        <p>
+          First, we start with some initial imports and grab the top 10 most
+          common words from the spam text file. To do this, we can read in the
+          text file using the <span class="code">open()</span> function, count
+          the number of occurrences per word using a
+          <span class="code">for</span> loop ignoring stopwords, and print out
+          the top 10 using another <span class="code">for</span> loop.
+        </p>
+        <div class="w3-center">
+          <figure>
+            <img
+              src="images/project_17_2.PNG"
+              alt="Imports and top 10 words in spam file screenshot"
+              class="w3-image"
+              style="border-radius: 15px"
+            />
+            <figcaption class="w3-center">
+              Imports and top 10 words in spam file
+            </figcaption>
+          </figure>
+        </div>
+        <p>Let's also do the same thing for the non-spam file.</p>
+        <div class="w3-center">
+          <figure>
+            <img
+              src="images/project_17_3.PNG"
+              alt="Imports and top 10 words in non-spam file screenshot"
+              class="w3-image"
+              style="border-radius: 15px"
+            />
+            <figcaption class="w3-center">
+              Top 10 words in non-spam file
+            </figcaption>
+          </figure>
+        </div>
+        <p>
+          Instead of just using the top 10 words found in the spam file to help
+          identify spam, we can find the top words present in the spam file that
+          are not present in the top words of the non-spam file. These words
+          would be good differentiators, in case there are words that are common
+          to both files. We can do this using the
+          <span class="code">np.setdiff1d()</span> function to accomplish this
+          and then create a list of those words.
+        </p>
+        <div class="w3-center">
+          <figure>
+            <img
+              src="images/project_17_4.PNG"
+              alt="Find top differentiator words screenshot"
+              class="w3-image"
+              style="border-radius: 15px"
+            />
+            <figcaption class="w3-center">
+              Find top differentiator words
+            </figcaption>
+          </figure>
+        </div>
+        <p>
+          Now we can read in our data, remove NA values, and try to match our
+          top words against the email text. First, we can create a new column of
+          email that is all lowercase by using the
+          <span class="code">lower()</span> method so that it will be easier to
+          match.
+        </p>
+        <div class="w3-center">
+          <figure>
+            <img
+              src="images/project_17_5.PNG"
+              alt="Read in data and create lowercase email column screenshot"
+              class="w3-image"
+              style="border-radius: 15px"
+            />
+            <figcaption class="w3-center">
+              Read in data and create lowercase email column
+            </figcaption>
+          </figure>
+        </div>
+        <p>
+          Next, we can use that column and create another column of just the
+          unique words. This way we easily determine exactly how many unique
+          values of each email match the words in our top words list. To do
+          this, we can create a function that splits the words and uses the
+          <span class="code">np.unique()</span> function to return a list of
+          unique values.
+        </p>
+        <div class="w3-center">
+          <figure>
+            <img
+              src="images/project_17_6.PNG"
+              alt="Create unique lowercase email column screenshot"
+              class="w3-image"
+              style="border-radius: 15px"
+            />
+            <figcaption class="w3-center">
+              Create unique lowercase email column
+            </figcaption>
+          </figure>
+        </div>
+        <p>
+          Finally we create a new dataframe called df_match of only rows that
+          contain at least one match. Now we make a new column called unique
+          count of matches to get the unique count of matches for each row, and
+          a percent match column of the percentage match where 6/6 matches would
+          mean 100%, although it's possible for percentages to be higher due to
+          word variations.
+        </p>
+        <div class="w3-center">
+          <figure>
+            <img
+              src="images/project_17_7.PNG"
+              alt="Calculate percent match screenshot"
+              class="w3-image"
+              style="border-radius: 15px"
+            />
+            <figcaption class="w3-center">Calculate percent match</figcaption>
+          </figure>
+        </div>
+        <p>
+          With what we have now, you can easily sort by highest to lowest
+          percent matches and manually read the text to confirm whether an email
+          is spam or not. The main advantage we gained here is this assistance
+          in highlighting which emails are likely to be spam and which are not.
+          If we compare this to a bunch of unlabeled email data, it is clear
+          that labeling data using what we created here is much more efficient.
+        </p>
+        <p>
+          To train a model for classification, we can first import a labeled
+          dataset. In this case, a 0 means non-spam and a 1 means spam. Let's
+          name the columns as text and label.
+        </p>
+        <div class="w3-center">
+          <figure>
+            <img
+              src="images/project_17_8.PNG"
+              alt="Import labeled dataset screenshot"
+              class="w3-image"
+              style="border-radius: 15px"
+            />
+            <figcaption class="w3-center">Import labeled dataset</figcaption>
+          </figure>
+        </div>
+        <p>
+          Next, we will do some text preprocessing by creating a list corpus and
+          removing special characters, converting to lowercase, splitting words
+          (tokenize), ignoring stopwords, and reducing to base form (lemmatize).
+        </p>
+        <div class="w3-center">
+          <figure>
+            <img
+              src="images/project_17_9.PNG"
+              alt="Text preprocessing screenshot"
+              class="w3-image"
+              style="border-radius: 15px"
+            />
+            <figcaption class="w3-center">Text preprocessing</figcaption>
+          </figure>
+        </div>
+        <p>
+          Now we will use <span class="code">train_test_split()</span> to divide
+          the dataset into 2/3 train and 1/3 test. Then we will use a bag of
+          words model to transform the data into numerical features.
+        </p>
+        <div class="w3-center">
+          <figure>
+            <img
+              src="images/project_17_10.PNG"
+              alt="Train test split and feature extraction screenshot"
+              class="w3-image"
+              style="border-radius: 15px"
+            />
+            <figcaption class="w3-center">
+              Train test split and feature extraction
+            </figcaption>
+          </figure>
+        </div>
+        <p>
+          Finally, we can put our train data into a logistic regression model
+          and use our test data to see how it performs.
+        </p>
+        <div class="w3-center">
+          <figure>
+            <img
+              src="images/project_17_11.PNG"
+              alt="Logistic regression model screenshot"
+              class="w3-image"
+              style="border-radius: 15px"
+            />
+            <figcaption class="w3-center">Logistic regression model</figcaption>
+          </figure>
+        </div>
+        <p>
+          We can also use a confusion matrix to gauge how the model did on the
+          test data. This model did fairly well at 31/33 = ~94% accuracy, but
+          there are still many potential improvements. For instance, we could
+          try increasing our training data. In addition, we could explore other
+          models and then compare which one is best. Furthermore, we could do
+          cross-validation to make the model more generalizable. If we want to
+          go from an unlabeled dataset to a prediction model, we could combine
+          the rules-based approach with the classification model by using the
+          rules-based approach to assist in labeling, and then using the
+          classification model for prediction.
+        </p>
+        <div class="w3-center">
+          <figure>
+            <img
+              src="images/project_17_12.PNG"
+              alt="Confusion matrix screenshot"
+              class="w3-image"
+              style="border-radius: 15px"
+            />
+            <figcaption class="w3-center">Confusion matrix</figcaption>
+          </figure>
+        </div>
+      </div>
+
+      <!-- Footer -->
+      <footer>
+        <div class="w3-black w3-center w3-padding-24">
+          <p>&copy 2021 Jonathan Chen</p>
+        </div>
+      </footer>
+
+      <!-- End page content -->
+    </div>
+
+    <script>
+      // Script to open and close sidebar
+      function w3_open() {
+        document.getElementById("mySidebar").style.opacity = "1";
+        document.getElementById("mySidebar").style.animation = "myMove .5s 1";
+        document.getElementById("mySidebar").style.display = "block";
+        document.getElementById("myOverlay").style.display = "block";
+      }
+
+      function w3_close() {
+        document.getElementById("mySidebar").style.opacity = ".6";
+        document.getElementById("mySidebar").style.display = "none";
+        document.getElementById("myOverlay").style.display = "none";
+      }
+    </script>
+  </body>
+</html>
