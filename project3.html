@@ -94,21 +94,9 @@
         style="min-height: 100vh"
       >
         <h2 class="w3-center" style="margin-top: 10%">
-          <b>Coming Soon</b>
+          <b>Featured Project</b>
         </h2>
-        <p>
-          Data engineering, which involves building and maintaining data
-          pipelines, is important because it ensures that we can have good data
-          to work with for things like data analysis and data science. Data
-          engineering is what transforms the manual act of grabbing data from an
-          online file into an automated, scalable, and efficient process for
-          organizations. There are many components that go into a modern data
-          stack and the exact parts and choices would depend on your
-          organization, but below is a simple example. It's important to note
-          that there is a lot of overlap in many modern platforms as they are
-          designed to be multi-functional. For example, you can probably store,
-          transform, and automate workflows using just one tool.
-        </p>
+        <h3 class="w3-center">Fishing Data Engineering</h3>
         <div style="display: flex; justify-content: center">
           <div
             style="
@@ -148,7 +136,7 @@
                     ETL tools, scheduling systems, ingestion pipelines
                   </td>
                   <td style="padding: 8px; border: 1px solid #777">
-                    Moves data from sources into storage automatically and
+                    Move data from sources into storage automatically and
                     reliably
                   </td>
                 </tr>
@@ -183,13 +171,140 @@
                     Power BI, Tableau, SQL UI
                   </td>
                   <td style="padding: 8px; border: 1px solid #777">
-                    Interfaces for business users, analysts, scientists to
-                    explore and use the data
+                    Interfaces for business users, analysts, and scientists to
+                    explore/use the data
                   </td>
                 </tr>
               </tbody>
             </table>
           </div>
+        </div>
+        <p>
+          Data engineering, which involves building and maintaining data
+          pipelines, is important because it ensures that we can have good data
+          to work with for things like data analysis and data science. Data
+          engineering is what transforms the manual act of grabbing data from an
+          online file into an automated, scalable, and efficient process for
+          organizations. There are many components that go into a modern data
+          stack and the exact parts and choices would depend on your
+          organization, but below is a simple example. It's important to note
+          that there is a lot of overlap in many modern platforms as they are
+          designed to be multi-functional. For example, you can probably store,
+          transform, and automate workflows using just one tool. Depending on
+          the team, you may only be responsible for part of the data pipeline. A
+          webpage version of the iPython notebook can be accessed
+          <a href="fish.html" target="_blank">here</a> and a GitHub repository
+          of the files can be found
+          <a href="https://github.com/jnthnchen/Fishing" target="_blank"
+            >here</a
+          >
+        </p>
+
+        <p>
+          As an example, imagine if we want to update a custom summary table
+          with new data about fishing catches on a routine basis so that we can
+          use the table to auto populate BI dashboards and monitor fishing
+          activity. To keep things simple, let's just use a static CSV file as
+          our data source. After downloading the file, we can easily import our
+          data into Databricks and then quickly use a
+          <span class="code">SELECT</span> statement to check that it is there.
+        </p>
+        <div class="w3-center">
+          <figure>
+            <img
+              src="images/project_18_1.PNG"
+              alt="Select initial data screenshot"
+              class="w3-image"
+              style="border-radius: 15px"
+            />
+            <figcaption class="w3-center">View initial data</figcaption>
+          </figure>
+        </div>
+        <p>
+          Next, we can create our summary table using
+          <span class="code">CREATE TABLE</span> and populate it with a few
+          fields that we care about.
+        </p>
+        <div class="w3-center">
+          <figure>
+            <img
+              src="images/project_18_2.PNG"
+              alt="Create summary table screenshot"
+              class="w3-image"
+              style="border-radius: 15px"
+            />
+            <figcaption class="w3-center">Create summary table</figcaption>
+          </figure>
+        </div>
+        <p>
+          On a monthly basis, we can now <span class="code">INSERT</span> into
+          our new table with data from the previous month. For the sake of this
+          example, we are using static values but in reality you would use
+          dynamic values (commented out) for the month and year so that it will
+          automatically work.
+        </p>
+        <div class="w3-center">
+          <figure>
+            <img
+              src="images/project_18_3.PNG"
+              alt="Insert into summary table screenshot"
+              class="w3-image"
+              style="border-radius: 15px"
+            />
+            <figcaption class="w3-center">Insert into summary table</figcaption>
+          </figure>
+        </div>
+        <p>
+          To confirm that our data loaded properly, we can use
+          <span class="code">SELECT</span> again, this time grabbing from our
+          summary table.
+        </p>
+        <div class="w3-center">
+          <figure>
+            <img
+              src="images/project_18_4.PNG"
+              alt="Select summary table screenshot"
+              class="w3-image"
+              style="border-radius: 15px"
+            />
+            <figcaption class="w3-center">View summary table</figcaption>
+          </figure>
+        </div>
+        <p>
+          Now we can easily schedule a job that runs on the first day of the
+          month and updates our summary table with new data.
+        </p>
+        <div class="w3-center">
+          <figure>
+            <img
+              src="images/project_18_5.PNG"
+              alt="Create job screenshot"
+              class="w3-image"
+              style="border-radius: 15px"
+            />
+            <figcaption class="w3-center">Databricks job</figcaption>
+          </figure>
+        </div>
+        <p>
+          Finally, we can connect our Databricks table to a BI tool like Power
+          BI and see the data from our custom summary table. The end result is
+          an automated segment of the data pipeline that updates a custom table
+          with new data on a routine basis. The data is then pulled by a BI tool
+          which, depending on the storage mode you choose, will automatically
+          refresh with new data on a routine basis as well.
+        </p>
+        <div class="w3-center">
+          <figure>
+            <img
+              src="images/project_18_6.PNG"
+              alt="Power BI screenshot"
+              class="w3-image"
+              style="border-radius: 15px"
+            />
+            <figcaption class="w3-center">
+              Power BI pulling from summary table
+            </figcaption>
+          </figure>
         </div>
       </div>
     </div>
