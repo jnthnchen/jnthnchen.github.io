@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <title>Jonathan Chen</title>
   <meta charset="UTF-8" />
@@ -97,88 +97,122 @@
           <b>Featured Project</b>
         </h2>
         <h3 class="w3-center">Fishing Data Engineering</h3>
-        <div style="display: flex; justify-content: center">
+        <div style="display: flex; justify-content: center; width: 100%">
           <div
             style="
-              overflow-x: auto;
-              background-color: #5a5a5a;
-              padding: 16px;
+              display: inline-block;
+              border: 5px solid #2ecc71;
               border-radius: 8px;
+              padding: 0px;
+              position: relative;
             "
           >
-            <table
-              style="width: 100%; border-collapse: collapse; color: #ffffff"
+            <div
+              style="
+                position: absolute;
+                top: -12px;
+                left: 12px;
+                background-color: #2ecc71;
+                color: white;
+                padding: 2px 8px;
+                border-radius: 8px;
+                font-weight: bold;
+                font-size: 13px;
+              "
             >
-              <thead>
-                <tr style="background-color: #4a4a4a">
-                  <th style="padding: 8px; border: 1px solid #777">Part</th>
-                  <th style="padding: 8px; border: 1px solid #777">Examples</th>
-                  <th style="padding: 8px; border: 1px solid #777">Purpose</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td style="padding: 8px; border: 1px solid #777">
-                    Data Sources
-                  </td>
-                  <td style="padding: 8px; border: 1px solid #777">
-                    Static files, online forms, enterprise software
-                  </td>
-                  <td style="padding: 8px; border: 1px solid #777">
-                    Origin of data from business systems, users, or devices
-                  </td>
-                </tr>
-                <tr>
-                  <td style="padding: 8px; border: 1px solid #777">
-                    Automation
-                  </td>
-                  <td style="padding: 8px; border: 1px solid #777">
-                    ETL tools, scheduling systems, ingestion pipelines
-                  </td>
-                  <td style="padding: 8px; border: 1px solid #777">
-                    Move data from sources into storage automatically and
-                    reliably
-                  </td>
-                </tr>
-                <tr>
-                  <td style="padding: 8px; border: 1px solid #777">
-                    Data Storage
-                  </td>
-                  <td style="padding: 8px; border: 1px solid #777">
-                    Snowflake, SQL Server, Amazon S3
-                  </td>
-                  <td style="padding: 8px; border: 1px solid #777">
-                    Centralized repository for raw and processed data — supports
-                    querying, modeling, and integration
-                  </td>
-                </tr>
-                <tr>
-                  <td style="padding: 8px; border: 1px solid #777">
-                    Automation
-                  </td>
-                  <td style="padding: 8px; border: 1px solid #777">
-                    Databricks jobs, orchestration tools, workflow schedulers
-                  </td>
-                  <td style="padding: 8px; border: 1px solid #777">
-                    Transform data and update tables on a routine basis
-                  </td>
-                </tr>
-                <tr>
-                  <td style="padding: 8px; border: 1px solid #777">
-                    End User UI
-                  </td>
-                  <td style="padding: 8px; border: 1px solid #777">
-                    Power BI, Tableau, SQL UI
-                  </td>
-                  <td style="padding: 8px; border: 1px solid #777">
-                    Interfaces for business users, analysts, and scientists to
-                    explore/use the data
-                  </td>
-                </tr>
-              </tbody>
-            </table>
+              Data Privacy and Compliance
+            </div>
+
+            <div style="display: flex; justify-content: center">
+              <div
+                style="
+                  overflow-x: auto;
+                  background-color: #5a5a5a;
+                  padding: 16px;
+                  border-radius: 8px;
+                "
+              >
+                <table
+                  style="width: 100%; border-collapse: collapse; color: #ffffff"
+                >
+                  <thead>
+                    <tr style="background-color: #4a4a4a">
+                      <th style="padding: 8px; border: 1px solid #777">Part</th>
+                      <th style="padding: 8px; border: 1px solid #777">
+                        Examples
+                      </th>
+                      <th style="padding: 8px; border: 1px solid #777">
+                        Purpose
+                      </th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td style="padding: 8px; border: 1px solid #777">
+                        Generation
+                      </td>
+                      <td style="padding: 8px; border: 1px solid #777">
+                        Static files, online forms, enterprise software
+                      </td>
+                      <td style="padding: 8px; border: 1px solid #777">
+                        Origin of data from business systems, users, and devices
+                      </td>
+                    </tr>
+                    <tr>
+                      <td style="padding: 8px; border: 1px solid #777">
+                        Ingestion
+                      </td>
+                      <td style="padding: 8px; border: 1px solid #777">
+                        ETL jobs, API integrations, batch/stream ingestion
+                      </td>
+                      <td style="padding: 8px; border: 1px solid #777">
+                        Move data from sources into storage automatically and
+                        reliably
+                      </td>
+                    </tr>
+                    <tr>
+                      <td style="padding: 8px; border: 1px solid #777">
+                        Storage
+                      </td>
+                      <td style="padding: 8px; border: 1px solid #777">
+                        Snowflake, SQL Server, Amazon S3
+                      </td>
+                      <td style="padding: 8px; border: 1px solid #777">
+                        Centralized repository for raw and processed data to
+                        support querying, modeling, and integration
+                      </td>
+                    </tr>
+                    <tr>
+                      <td style="padding: 8px; border: 1px solid #777">
+                        Transformation
+                      </td>
+                      <td style="padding: 8px; border: 1px solid #777">
+                        Data modeling, data cleaning, orchestration tools
+                      </td>
+                      <td style="padding: 8px; border: 1px solid #777">
+                        Transform data, apply business logic, and update tables
+                        on a routine basis
+                      </td>
+                    </tr>
+                    <tr>
+                      <td style="padding: 8px; border: 1px solid #777">
+                        Serving
+                      </td>
+                      <td style="padding: 8px; border: 1px solid #777">
+                        Power BI, Tableau, SQL UI
+                      </td>
+                      <td style="padding: 8px; border: 1px solid #777">
+                        Interfaces for business users, analysts, and scientists
+                        to explore/consume the data
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
           </div>
         </div>
+
         <p>
           Data engineering, which involves building and maintaining data
           pipelines, is important because it ensures that we can have good data
