@@ -417,6 +417,62 @@
             <figcaption class="w3-center">Confusion matrix</figcaption>
           </figure>
         </div>
+
+        <p>
+          To deploy this simple model, we can save our model and CountVectorizer
+          to be loaded into a Streamlit app.
+        </p>
+        <div class="w3-center">
+          <figure>
+            <img
+              src="images/project_17_13.PNG"
+              alt="Save model screenshot"
+              class="w3-image"
+              style="border-radius: 15px"
+            />
+            <figcaption class="w3-center">Save model</figcaption>
+          </figure>
+        </div>
+        <p>Now we just need to set up an app.py file like below.</p>
+        <div class="w3-center">
+          <figure>
+            <img
+              src="images/project_17_14.PNG"
+              alt="App.py screenshot"
+              class="w3-image"
+              style="border-radius: 15px"
+            />
+            <figcaption class="w3-center">Create app</figcaption>
+          </figure>
+        </div>
+        <p>
+          And finally a requirements.txt file with the following dependencies.
+        </p>
+        <ul>
+          <li>streamlit</li>
+          <li>scikit-learn</li>
+          <li>pandas</li>
+          <li>numpy</li>
+          <li>nltk</li>
+        </ul>
+        <p>
+          Now we can easily use the app
+          <a href="https://bcwuz77heyjwgdtwwpyyqm.streamlit.app" target="_blank"
+            >here</a
+          >
+          which uses our model to classify spam or not spam!
+        </p>
+        <div class="w3-center">
+          <figure>
+            <img
+              src="images/project_17_15.PNG"
+              alt="App screenshot"
+              class="w3-image"
+              style="border-radius: 15px"
+            />
+            <figcaption class="w3-center">Deployed app</figcaption>
+          </figure>
+        </div>
       </div>
 
       <!-- Footer -->
